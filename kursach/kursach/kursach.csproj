@@ -100,10 +100,10 @@
     <Resource Include="images-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Без названия.png" />
+    <Resource Include="Без_названия-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Без_названия-removebg-preview.png" />
+    <Resource Include="images-preview-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
