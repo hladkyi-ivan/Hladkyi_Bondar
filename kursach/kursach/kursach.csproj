@@ -94,5 +94,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Без названия.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Без_названия-removebg-preview.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
