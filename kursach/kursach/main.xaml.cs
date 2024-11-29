@@ -15,13 +15,19 @@ using System.Windows.Shapes;
 
 namespace kursach
 {
-    
-    public partial class MainWindow : Window
+    /// <summary>
+    /// Логика взаимодействия для main.xaml
+    /// </summary>
+    public partial class main : Page
     {
-        public MainWindow()
+        public main()
         {
             InitializeComponent();
-            MyFrame.Content = new main();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new login());
         }
     }
 }

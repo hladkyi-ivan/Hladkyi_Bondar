@@ -8,17 +8,27 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="login">
 
-    <Grid Background="White">
+    <Grid Background="#FF0061BB">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="35*"/>
-            <ColumnDefinition Width="764*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="36*"/>
+            <ColumnDefinition Width="91.129"/>
+            <ColumnDefinition Width="164"/>
+            <ColumnDefinition Width="239.914"/>
+            <ColumnDefinition Width="269*"/>
 
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
+            <RowDefinition Height="126"/>
+            <RowDefinition Height="43.04"/>
+            <RowDefinition Height="19"/>
+            <RowDefinition Height="19.96"/>
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="23"/>
+            <RowDefinition Height="118"/>
         </Grid.RowDefinitions>
-        <Border BorderThickness="1" Margin="0,1,0,4" BorderBrush="Red" Grid.ColumnSpan="3">
+        <Border BorderThickness="1" Margin="0,1,0,4" BorderBrush="Red" Grid.ColumnSpan="6">
             <Border.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF6F1010" Offset="0.438"/>
@@ -29,10 +39,20 @@
 
         </Border>
 
-        <Button Content="Button" Margin="0,1,0,4" Grid.Column="1" HorizontalAlignment="Center" Width="38" Foreground="{x:Null}" BorderBrush="{x:Null}">
+        <Button Content="Button" Margin="0,1,0,4" Click="Back" Grid.Column="1" HorizontalAlignment="Center" Width="38" Foreground="{x:Null}" BorderBrush="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="/Без названия (3).png"/>
             </Button.Background>
         </Button>
+        <Image Grid.Column="3" Height="108" Grid.Row="1" VerticalAlignment="Top" Source="/istockphoto-469936880-170667a-removebg-preview.png" Margin="6,16,2,0" Grid.ColumnSpan="3"/>
+        <TextBox Grid.Column="4" HorizontalAlignment="Center" Grid.Row="3" TextWrapping="Wrap" Text="Email" VerticalAlignment="Center" Width="196" Height="18"/>
+        <TextBlock Grid.Column="4" HorizontalAlignment="Center" Margin="0,23,0,0" Grid.Row="5" TextWrapping="Wrap" Text="Регистрация" Width="73"/>
+        <Button Grid.Column="4" Content="Вход" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Center" RenderTransformOrigin="-0.071,0.453" Height="20" Width="73"/>
+        <PasswordBox Grid.Column="4" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Top" Width="196" Height="18"/>
+
+
+
+
+        <!-- Button to remove favorite ticket -->
     </Grid>
 </Page>

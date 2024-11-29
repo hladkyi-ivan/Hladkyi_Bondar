@@ -1,0 +1,55 @@
+﻿<Page x:Class="kursach.main"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:kursach"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="main">
+
+    <Grid Background="#FF0061BB">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="359*"/>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="20*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+        <!-- Замена WrapPanel на StackPanel -->
+        <Border BorderThickness="1" Margin="0,1,0,0" BorderBrush="Red" Grid.ColumnSpan="3">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF6F1010" Offset="0.438"/>
+                    <GradientStop Color="#FFDA4C4C" Offset="1"/>
+                    <GradientStop Color="#FF761414" Offset="0.281"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal" Margin="10,10,0,0">
+                <ComboBox Width="130" Height="20"
+                    HorizontalAlignment="Center" VerticalAlignment="Center" IsSynchronizedWithCurrentItem="True">
+                    <ComboBoxItem Content="Элемент 1" />
+                    <ComboBoxItem Content="Элемент 2" />
+                    <ComboBoxItem Content="Элемент 3" />
+                </ComboBox>
+                <ComboBox Width="130" Height="19" Margin="10,0,0,0"/>
+                <DatePicker Width="122" Height="28" Margin="10,0,0,0"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Кнопки вне StackPanel -->
+        <Button Grid.Column="2" HorizontalAlignment="Center" Click="Button_Click" VerticalAlignment="Center" Height="40" Width="40" BorderBrush="#00000000">
+            <Button.Background>
+                <ImageBrush ImageSource="/Без_названия-removebg-preview.png"/>
+            </Button.Background>
+        </Button>
+
+        <Button HorizontalAlignment="Left" VerticalAlignment="Center" Width="30" Height="20" BorderBrush="Transparent" Margin="2,0,0,0" Grid.Column="1">
+            <Button.Background>
+                <ImageBrush ImageSource="/images-preview-removebg-preview.png"/>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Page>
