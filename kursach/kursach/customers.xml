@@ -49,4 +49,11 @@
     <Password>Soluk86</Password>
     <PhoneNumber>+380972451882</PhoneNumber>
   </Customer>
+  <Customer>
+    <FirstName>к</FirstName>
+    <SecondName>к</SecondName>
+    <NickName>к</NickName>
+    <Password>к</Password>
+    <PhoneNumber>к</PhoneNumber>
+  </Customer>
 </ArrayOfCustomer>

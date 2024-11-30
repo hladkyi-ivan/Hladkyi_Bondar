@@ -10,7 +10,10 @@ namespace kursach.Model
 {
     public class CustomerService
     {
-        private const string FilePath = "C:\\Users\\ivann\\Desktop\\Курсова\\kursach\\kursach\\customers.xml";
+        private static readonly string FilePath = Path.Combine(
+         Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName,
+         "customers.xml"
+     );
         private List<Customer> _customers;
         public static bool IsUserLoggedIn { get; set; } = false;
         public CustomerService()
