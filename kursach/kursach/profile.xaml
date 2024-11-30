@@ -19,10 +19,10 @@
             <ColumnDefinition Width="257*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="20*"/>
-            <RowDefinition Height="21*"/>
-            <RowDefinition Height="74*"/>
-            <RowDefinition Height="110*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="167*"/>
+            <RowDefinition Height="201*"/>
         </Grid.RowDefinitions>
         <Border BorderThickness="1" Margin="0,1,0,0" BorderBrush="Red" Grid.ColumnSpan="4" >
             <Border.Background>
@@ -40,7 +40,7 @@
                 <ImageBrush ImageSource="/Без названия (3).png"/>
             </Button.Background>
         </Button>
-        <Button Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,200" Grid.Row="1" Width="200" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="200" Grid.RowSpan="3">
+        <Button Grid.Column="1" HorizontalAlignment="Center" Margin="0,5,0,5" Grid.Row="2" Width="158" BorderBrush="{x:Null}" Foreground="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="/Без_названия-removebg-preview.png" TileMode="None" Stretch="UniformToFill"/>
             </Button.Background>
@@ -71,7 +71,6 @@
             <TextBlock TextWrapping="Wrap" Text="Прізвище:" Width="59"/>
             <TextBlock TextWrapping="Wrap" Text="" Width="208" Height="17"/>
         </StackPanel>
-        <Button Grid.Column="1" Content="Мої квитки" HorizontalAlignment="Center" Margin="0,62,0,0" Grid.Row="3" VerticalAlignment="Top"/>
-        <Frame Name="MyFrame" NavigationUIVisibility="Hidden"/>
+        <Button Grid.Column="1" Content="Мої квитки" HorizontalAlignment="Center" Margin="0,62,0,0" Grid.Row="3" VerticalAlignment="Top" Height="20" Width="65"/>
     </Grid>
 </Page>
