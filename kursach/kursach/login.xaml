@@ -24,11 +24,11 @@
             <RowDefinition Height="43.04"/>
             <RowDefinition Height="19"/>
             <RowDefinition Height="19.96"/>
-            <RowDefinition Height="48"/>
-            <RowDefinition Height="23"/>
-            <RowDefinition Height="118"/>
+            <RowDefinition Height="54"/>
+            <RowDefinition Height="43"/>
+            <RowDefinition Height="92"/>
         </Grid.RowDefinitions>
-        <Border BorderThickness="1" Margin="0,1,0,4" BorderBrush="Red" Grid.ColumnSpan="6">
+        <Border BorderThickness="1" Margin="0,1,0,4" BorderBrush="Red" Grid.ColumnSpan="6" Height="40">
             <Border.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF6F1010" Offset="0.438"/>
@@ -44,15 +44,66 @@
                 <ImageBrush ImageSource="/Без названия (3).png"/>
             </Button.Background>
         </Button>
-        <Image Grid.Column="3" Height="108" Grid.Row="1" VerticalAlignment="Top" Source="/istockphoto-469936880-170667a-removebg-preview.png" Margin="6,16,2,0" Grid.ColumnSpan="3"/>
-        <TextBox Grid.Column="4" HorizontalAlignment="Center" Grid.Row="3" TextWrapping="Wrap" Text="Email" VerticalAlignment="Center" Width="196" Height="18"/>
-        <TextBlock Grid.Column="4" HorizontalAlignment="Center" Margin="0,23,0,0" Grid.Row="5" TextWrapping="Wrap" Text="Регистрация" Width="73"/>
-        <Button Grid.Column="4" Content="Вход" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Center" RenderTransformOrigin="-0.071,0.453" Height="20" Width="73"/>
-        <PasswordBox Grid.Column="4" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Top" Width="196" Height="18"/>
+        <Image Grid.Column="3" Height="108" Grid.Row="1" VerticalAlignment="Center" Source="/istockphoto-469936880-170667a-removebg-preview.png" Margin="103,0,207,0" Grid.ColumnSpan="3"/>
+        <Button Grid.Column="4" Content="Вход" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Center" Height="40" Width="100" BorderBrush="White" FontWeight="Bold">
+            <Button.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#FF7ABFC1" Offset="0.321"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1" CornerRadius="20" Margin="0,0,0,7">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <PasswordBox x:Name="pasword" 
+             Grid.Column="4" 
+             HorizontalAlignment="Center" 
+             Grid.Row="5" 
+             VerticalAlignment="Top" 
+             Width="196" 
+             Height="18">
+            <PasswordBox.Template>
+                <ControlTemplate TargetType="PasswordBox">
+                    <Border Background="White" 
+                    BorderBrush="Black" 
+                    BorderThickness="1" 
+                    CornerRadius="0">
+                        <ScrollViewer x:Name="PART_ContentHost"/>
+                    </Border>
+                </ControlTemplate>
+            </PasswordBox.Template>
+        </PasswordBox>
+        <Button Grid.Column="4" Click="Button_Click" Content="Регистрация" HorizontalAlignment="Center" Margin="0,27,0,0" Grid.Row="5" VerticalAlignment="Top" Height="17" Width="76" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" FontSize="12" FontWeight="Bold"/>
+        <TextBox x:Name="gmail" 
+         Grid.Column="4" 
+         HorizontalAlignment="Center" 
+         Grid.Row="3" 
+         TextWrapping="Wrap" 
+         Text="Gmail" 
+         VerticalAlignment="Center" 
+         Width="196" 
+         GotFocus="Gmail_GotFocus" 
+         LostFocus="Gmail_LostFocus" 
+         Foreground="Gray">
+            <TextBox.Template>
+                <ControlTemplate TargetType="TextBox">
+                    <Border Background="White" 
+                    BorderBrush="Gray" 
+                    BorderThickness="1" 
+                    CornerRadius="10">
+                        <ScrollViewer x:Name="PART_ContentHost"/>
+                    </Border>
+                </ControlTemplate>
+            </TextBox.Template>
+        </TextBox>
 
 
 
 
-        <!-- Button to remove favorite ticket -->
+
     </Grid>
 </Page>

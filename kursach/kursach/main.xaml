@@ -18,8 +18,7 @@
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
 
-        <!-- Замена WrapPanel на StackPanel -->
-        <Border BorderThickness="1" Margin="0,1,0,0" BorderBrush="Red" Grid.ColumnSpan="3">
+        <Border BorderThickness="1" Margin="0,1,0,0" BorderBrush="Red" Grid.ColumnSpan="3" Height="42">
             <Border.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF6F1010" Offset="0.438"/>
@@ -39,8 +38,7 @@
             </StackPanel>
         </Border>
 
-        <!-- Кнопки вне StackPanel -->
-        <Button Grid.Column="2" HorizontalAlignment="Center" Click="Button_Click" VerticalAlignment="Center" Height="40" Width="40" BorderBrush="#00000000">
+        <Button Grid.Column="2" HorizontalAlignment="Center" Click="Button_Click" VerticalAlignment="Center" Height="40" Width="40" BorderBrush="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="/Без_названия-removebg-preview.png"/>
             </Button.Background>
