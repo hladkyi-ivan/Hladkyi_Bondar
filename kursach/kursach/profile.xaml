@@ -10,14 +10,18 @@
 
     <Grid Background="#FF0061BB">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="19*"/>
-            <ColumnDefinition Width="381*"/>
+            <ColumnDefinition Width="38*"/>
+            <ColumnDefinition Width="229*"/>
+            <ColumnDefinition Width="276*"/>
+            <ColumnDefinition Width="257*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="4*"/>
-            <RowDefinition Height="41*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="74*"/>
+            <RowDefinition Height="110*"/>
         </Grid.RowDefinitions>
-        <Border BorderThickness="1" Margin="0,1,0,0" BorderBrush="Red" Grid.ColumnSpan="2" >
+        <Border BorderThickness="1" Margin="0,1,0,0" BorderBrush="Red" Grid.ColumnSpan="4" >
             <Border.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF6F1010" Offset="0.438"/>
@@ -33,5 +37,37 @@
                 <ImageBrush ImageSource="/Без названия (3).png"/>
             </Button.Background>
         </Button>
+        <Button Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,200" Grid.Row="1" Width="200" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="200" Grid.RowSpan="3">
+            <Button.Background>
+                <ImageBrush ImageSource="/Без_названия-removebg-preview.png" TileMode="None" Stretch="UniformToFill"/>
+            </Button.Background>
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}" 
+                        BorderBrush="{TemplateBinding BorderBrush}" 
+                        BorderThickness="1" 
+                        CornerRadius="20">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <StackPanel Grid.Column="2" Margin="3,41,6,132" Orientation="Horizontal" Grid.Row="1" Grid.RowSpan="2">
+            <TextBlock TextWrapping="Wrap" Text="Gmail:" Width="35"/>
+            <TextBlock TextWrapping="Wrap" Text="" Width="232" Height="17"/>
+        </StackPanel>
+        <StackPanel Grid.Column="2" Margin="3,41,6,90" Orientation="Horizontal" Grid.Row="2">
+            <TextBlock TextWrapping="Wrap" Width="96"><Run Language="ru-ru" Text="Номер телефона"/><Run Text=":"/></TextBlock>
+            <TextBlock TextWrapping="Wrap" Text="" Width="170" Height="17"/>
+        </StackPanel>
+        <StackPanel Grid.Column="2" Margin="3,83,6,48" Orientation="Horizontal" Grid.Row="2">
+            <TextBlock TextWrapping="Wrap" Text="Ім'я:" Width="35"/>
+            <TextBlock TextWrapping="Wrap" Text="" Width="233" Height="17"/>
+        </StackPanel>
+        <StackPanel Grid.Column="2" Margin="3,126,6,5" Orientation="Horizontal" Grid.Row="2">
+            <TextBlock TextWrapping="Wrap" Text="Прізвище:" Width="59"/>
+            <TextBlock TextWrapping="Wrap" Text="" Width="208" Height="17"/>
+        </StackPanel>
+        <Button Grid.Column="1" Content="Мої квитки" HorizontalAlignment="Center" Margin="0,62,0,0" Grid.Row="3" VerticalAlignment="Top"/>
     </Grid>
 </Page>
