@@ -12,6 +12,7 @@ namespace kursach.Model
     {
         private const string FilePath = "C:\\Users\\ivann\\Desktop\\Курсова\\kursach\\kursach\\customers.xml";
         private List<Customer> _customers;
+        public static bool IsUserLoggedIn { get; set; } = false;
         public CustomerService()
         {
             if (File.Exists(FilePath))
@@ -33,7 +34,13 @@ namespace kursach.Model
         public bool ValidateUserCredentials(string nickName, string password)
         {
             var customer = GetByNickName(nickName);
-            return customer != null && customer.Password == password;
+            if (customer != null && customer.Password == password)
+            {
+                IsUserLoggedIn = true; 
+                return true;
+            }
+            IsUserLoggedIn = false;
+            return false;
         }
         private void SaveChanges()
         {

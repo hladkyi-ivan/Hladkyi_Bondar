@@ -43,7 +43,7 @@
 
         </Border>
 
-        <Button Content="Button" Margin="0,1,0,4" Click="Back" Grid.Column="1" HorizontalAlignment="Center" Width="38" Foreground="{x:Null}" BorderBrush="{x:Null}">
+        <Button Content="Button" Margin="0,1,0,4" Command="{Binding NavigateToMainCommand}" Grid.Column="1" HorizontalAlignment="Center" Width="38" Foreground="{x:Null}" BorderBrush="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="/Без названия (3).png"/>
             </Button.Background>
@@ -82,7 +82,7 @@
                 </ControlTemplate>
             </PasswordBox.Template>
         </PasswordBox>
-        <Button Grid.Column="4" Click="Button_Click" Content="Регистрация" HorizontalAlignment="Center" Margin="0,27,0,0" Grid.Row="5" VerticalAlignment="Top" Height="17" Width="76" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" FontSize="12" FontWeight="Bold"/>
+        <Button Grid.Column="4" Command="{Binding NavigateToRegisterCommand}" Content="Регистрация" HorizontalAlignment="Center" Margin="0,27,0,0" Grid.Row="5" VerticalAlignment="Top" Height="17" Width="76" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" FontSize="12" FontWeight="Bold"/>
         <TextBox x:Name="gmail" 
          Grid.Column="4" 
          HorizontalAlignment="Center" 
@@ -103,5 +103,7 @@
                 </ControlTemplate>
             </TextBox.Template>
         </TextBox>
+        <Frame Name="MyFrame" NavigationUIVisibility="Hidden"/>
+
     </Grid>
 </Page>

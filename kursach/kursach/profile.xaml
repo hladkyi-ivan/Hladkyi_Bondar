@@ -4,10 +4,13 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:kursach"
+      xmlns:vm="clr-namespace:kursach.ViewModel"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="profile">
-
+    <Page.DataContext>
+        <vm:CustomerViewModel />
+    </Page.DataContext>
     <Grid Background="#FF0061BB">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="38*"/>
@@ -32,7 +35,7 @@
 
         </Border>
 
-        <Button Content="Button" Margin="0,1,0,0" Click="Back" HorizontalAlignment="Center" Width="38" Foreground="{x:Null}" BorderBrush="{x:Null}" RenderTransformOrigin="0.571,0.556">
+        <Button Content="Button" Margin="0,1,0,0" Command="{Binding NavigateToMainCommand}" HorizontalAlignment="Center" Width="38" Foreground="{x:Null}" BorderBrush="{x:Null}" RenderTransformOrigin="0.571,0.556">
             <Button.Background>
                 <ImageBrush ImageSource="/Без названия (3).png"/>
             </Button.Background>
@@ -69,5 +72,6 @@
             <TextBlock TextWrapping="Wrap" Text="" Width="208" Height="17"/>
         </StackPanel>
         <Button Grid.Column="1" Content="Мої квитки" HorizontalAlignment="Center" Margin="0,62,0,0" Grid.Row="3" VerticalAlignment="Top"/>
+        <Frame Name="MyFrame" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Page>

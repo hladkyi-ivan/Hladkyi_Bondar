@@ -16,24 +16,13 @@ using System.Windows.Shapes;
 
 namespace kursach
 {
-    /// <summary>
-    /// Логика взаимодействия для login.xaml
-    /// </summary>
     public partial class login : Page
     {
         public login()
         {
             InitializeComponent();
         }
-        private void Back(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new main());
-        }
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new registration());
-        }
-        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e) // PasswordBox не підтримує біндінг, тому я не знайшовши варіантів реалізації порушив правила патерну та додав цю логіку поки що сюди. Сподіваюся до здачі курсової вирішити цю проблему.
         {
             var passwordBox = sender as PasswordBox;
             if (passwordBox != null)

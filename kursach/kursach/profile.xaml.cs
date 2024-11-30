@@ -24,9 +24,5 @@ namespace kursach
         {
             InitializeComponent();
         }
-        private void Back(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new main());
-        }
     }
 }

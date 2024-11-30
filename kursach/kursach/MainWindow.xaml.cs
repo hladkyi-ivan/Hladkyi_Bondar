@@ -21,7 +21,6 @@ namespace kursach
         public MainWindow()
         {
             InitializeComponent();
-            MyFrame.Content = new main();
         }
     }
 }
