@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace kursach.Model
 {
-    internal class Customer
+    public class Customer
     {
         public string FirstName { get; set; }
         public string SecondName { get; set; }

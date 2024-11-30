@@ -1,4 +1,5 @@
-﻿using System;
+﻿using kursach.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,29 +29,18 @@ namespace kursach
         {
             NavigationService.Navigate(new main());
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new registration());
         }
-        private void Gmail_GotFocus(object sender, RoutedEventArgs e)
+        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
-            if (gmail.Text == "Gmail")
+            var passwordBox = sender as PasswordBox;
+            if (passwordBox != null)
             {
-                gmail.Text = "";
-                gmail.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.Black);
+                var viewModel = (CustomerViewModel)this.DataContext;
+                viewModel.Password = passwordBox.Password; 
             }
         }
-
-        private void Gmail_LostFocus(object sender, RoutedEventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(gmail.Text))
-            {
-                gmail.Text = "Gmail";
-                gmail.Foreground = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.Gray);
-            }
-        }
-
     }
-
 }

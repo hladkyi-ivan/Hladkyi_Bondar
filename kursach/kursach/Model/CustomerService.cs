@@ -1,46 +1,46 @@
 ﻿using System;
-using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.IO;
+using System.Xml.Serialization;
 namespace kursach.Model
 {
-    internal class CustomerService
+    public class CustomerService
     {
-        private readonly string _filePath = "customers.json";
-
+        private const string FilePath = "C:\\Users\\ivann\\Desktop\\Курсова\\kursach\\kursach\\customers.xml";
+        private List<Customer> _customers;
         public CustomerService()
         {
-            EnsureFileExists();
-        }
-        public async Task<List<Customer>> LoadCustomersAsync()
-        {
-            if (!File.Exists(_filePath))
-                return new List<Customer>();
-
-            using (StreamReader reader = new StreamReader(_filePath))
+            if (File.Exists(FilePath))
             {
-                string json = await reader.ReadToEndAsync();
-                return JsonConvert.DeserializeObject<List<Customer>>(json) ?? new List<Customer>();
+                var serializer = new XmlSerializer(typeof(List<Customer>));
+                using (var stream = File.OpenRead(FilePath))
+                {
+                    _customers = (List<Customer>)serializer.Deserialize(stream) ?? new List<Customer>();
+                }
+            }
+            else
+            {
+                _customers = new List<Customer>();
+                SaveChanges();
             }
         }
-        public async Task SaveCustomersAsync(List<Customer> customers)
+        public Customer GetByNickName(string nickName) =>
+            _customers.FirstOrDefault(c => c.NickName.Equals(nickName, StringComparison.OrdinalIgnoreCase));
+        public bool ValidateUserCredentials(string nickName, string password)
         {
-            string json = JsonConvert.SerializeObject(customers, Newtonsoft.Json.Formatting.Indented);
-
-            using (StreamWriter writer = new StreamWriter(_filePath))
-            {
-                await writer.WriteAsync(json);
-            }
+            var customer = GetByNickName(nickName);
+            return customer != null && customer.Password == password;
         }
-        private void EnsureFileExists()
+        private void SaveChanges()
         {
-            if (!File.Exists(_filePath))
+            var serializer = new XmlSerializer(typeof(List<Customer>));
+            using (var stream = File.Create(FilePath))
             {
-                File.WriteAllText(_filePath, JsonConvert.SerializeObject(new List<Customer>(), Newtonsoft.Json.Formatting.Indented));
+                serializer.Serialize(stream, _customers);
             }
         }
     }

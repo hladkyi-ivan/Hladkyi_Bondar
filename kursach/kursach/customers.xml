@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCustomer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Customer>
+		<Id>1a3f0f4b-d0cf-44e6-8d8d-423f3c53fefb</Id>
+		<FirstName>John</FirstName>
+		<SecondName>Doe</SecondName>
+		<NickName>1</NickName>
+		<Password>1</Password>
+		<PhoneNumber>+123456789</PhoneNumber>
+		<Email>john.doe@example.com</Email>
+	</Customer>
+</ArrayOfCustomer>
+
