@@ -9,13 +9,17 @@ using System.Windows.Input;
 using System.Windows;
 using kursach.Model;
 using System.Windows.Navigation;
+using Microsoft.Win32;
 
 namespace kursach.ViewModel
 {
     public class CustomerViewModel : INotifyPropertyChanged
     {
         private readonly CustomerService _repository = new CustomerService();
+        private string _firstName;
+        private string _secondName;
         private string _nickName;
+        private string _phoneNumber;
         private string _password;
         public string NickName
         {
@@ -27,16 +31,33 @@ namespace kursach.ViewModel
             get => _password;
             set { _password = value; OnPropertyChanged(); }
         }
+        public string FirstName
+        {
+            get => _firstName;
+            set { _firstName = value; OnPropertyChanged(); }
+        }
+        public string SecondName
+        {
+            get => _secondName;
+            set { _secondName = value; OnPropertyChanged(); }
+        }
+        public string PhoneNumber
+        {
+            get => _phoneNumber;
+            set { _phoneNumber = value; OnPropertyChanged(); }
+        }
+
         public ICommand LoginCommand { get; }
         public ICommand NavigateToLoginOrProfileCommand { get; }
         public ICommand NavigateToRegisterCommand {  get; }
         public ICommand NavigateToMainCommand { get; }
-
+        public ICommand RegisterCommand {  get; }
         public CustomerViewModel()
         {
             LoginCommand = new RelayCommand(Login);
             NavigateToLoginOrProfileCommand = new RelayCommand(NavigateToLoginOrProfile);
             NavigateToRegisterCommand = new RelayCommand(NavigateToRegister);
+            RegisterCommand = new RelayCommand(Register);
             NavigateToMainCommand = new RelayCommand(NavigateToMain);
         }
           private void NavigateToLoginOrProfile(object parameter)
@@ -84,6 +105,29 @@ namespace kursach.ViewModel
             else
             {
                 MessageBox.Show("Invalid nickname or password.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+        private void Register (object parameter)
+        {
+            if (string.IsNullOrEmpty(FirstName) || string.IsNullOrEmpty(SecondName) || string.IsNullOrEmpty(NickName) || string.IsNullOrEmpty(PhoneNumber) || string.IsNullOrEmpty(Password))
+            {
+                MessageBox.Show("All fields are required!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            var existingCustomer = _repository.GetByNickName(NickName);
+            if (existingCustomer != null)
+            {
+                MessageBox.Show("Nickname is already taken.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            var customer = new Customer(FirstName, SecondName, PhoneNumber, NickName, Password);
+            _repository.SaveCustomer(customer);
+
+            MessageBox.Show("Registration successful!", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+            CustomerService.IsUserLoggedIn = false;
+            if (Application.Current.MainWindow is MainWindow mainWindow)
+            {
+                mainWindow.MyFrame.Navigate(new Uri("login.xaml", UriKind.Relative));
             }
         }
         public event PropertyChangedEventHandler PropertyChanged;

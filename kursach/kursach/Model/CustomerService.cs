@@ -42,6 +42,11 @@ namespace kursach.Model
             IsUserLoggedIn = false;
             return false;
         }
+        public void SaveCustomer(Customer customer)
+        {
+            _customers.Add(customer);
+            SaveChanges();
+        }
         private void SaveChanges()
         {
             var serializer = new XmlSerializer(typeof(List<Customer>));

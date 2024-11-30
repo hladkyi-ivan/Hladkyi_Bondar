@@ -1,4 +1,5 @@
-﻿using System;
+﻿using kursach.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -16,9 +17,6 @@ using System.Windows.Shapes;
 
 namespace kursach
 {
-    /// <summary>
-    /// Логика взаимодействия для registration.xaml
-    /// </summary>
     public partial class registration : Page
     {
         public registration()
@@ -35,7 +33,6 @@ namespace kursach
 
             Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
         }
-
         private void Openurl_facebook(object sender, RoutedEventArgs e)
         {
             string url = "https://www.facebook.com/login/";
@@ -48,6 +45,14 @@ namespace kursach
 
             Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
         }
-
+        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e) // PasswordBox не підтримує біндінг, тому я не знайшовши варіантів реалізації порушив правила патерну та додав цю логіку поки що сюди. Сподіваюся до здачі курсової вирішити цю проблему.
+        {
+            var passwordBox = sender as PasswordBox;
+            if (passwordBox != null)
+            {
+                var viewModel = (CustomerViewModel)this.DataContext;
+                viewModel.Password = passwordBox.Password;
+            }
+        }
     }
 }

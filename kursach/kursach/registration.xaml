@@ -3,11 +3,14 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:vm="clr-namespace:kursach.ViewModel"
       xmlns:local="clr-namespace:kursach"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="registration">
-
+    <Page.DataContext>
+        <vm:CustomerViewModel />
+    </Page.DataContext>
     <Grid Background="#FF0061BB" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="37*"/>
@@ -95,7 +98,7 @@
             </Button.Template>
         </Button>
         <Label Content="              Реєстрація&#xD;&#xA; за допомогою соцмережі" HorizontalAlignment="Left" Margin="21,0,0,0" Grid.Row="3" VerticalAlignment="Center" FontFamily="Broadway" FontSize="16" FontWeight="Bold" Width="212" Height="51" FontStyle="Italic" Grid.Column="1" Grid.RowSpan="2"/>
-        <Button Grid.Column="2" Content="Реєстрація" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Center" Height="40" Width="100" BorderBrush="White" FontWeight="Bold">
+        <Button Grid.Column="2" Content="Реєстрація" Command="{Binding RegisterCommand}" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Center" Height="40" Width="100" BorderBrush="White" FontWeight="Bold">
             <Button.Background>
                 <LinearGradientBrush>
                     <GradientStop Color="#FF7ABFC1" Offset="0.321"/>
@@ -109,7 +112,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <TextBox x:Name="Name" Grid.Column="2" HorizontalAlignment="Center" Margin="0,57,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Ім'я" VerticalAlignment="Top" Width="160" Height="35" FontWeight="Bold">
+        <TextBox x:Name="Name" Text="{Binding FirstName}" Grid.Column="2" HorizontalAlignment="Center" Margin="0,57,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="160" Height="35" FontWeight="Bold">
             <TextBox.Style>
                 <Style TargetType="TextBox">
                     <Setter Property="BorderBrush" Value="Gray"/>
@@ -134,7 +137,7 @@
             </TextBox.Template>
         </TextBox>
 
-        <TextBox x:Name="SecondName" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" Text="Прізвище" VerticalAlignment="Top" Width="160" Height="37" FontWeight="Bold">
+        <TextBox x:Name="SecondName" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" Text="{Binding SecondName}" VerticalAlignment="Top" Width="160" Height="37" FontWeight="Bold">
             <TextBox.Style>
                 <Style TargetType="TextBox">
                     <Setter Property="BorderBrush" Value="Gray"/>
@@ -154,7 +157,7 @@
             </TextBox.Template>
         </TextBox>
 
-        <TextBox x:Name="Gmail" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="3" TextWrapping="Wrap" Text="Gmail" VerticalAlignment="Center" Width="160" Height="36" FontWeight="Bold">
+        <TextBox x:Name="Gmail" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="3" TextWrapping="Wrap" Text="{Binding PhoneNumber}" VerticalAlignment="Center" Width="160" Height="36" FontWeight="Bold">
             <TextBox.Style>
                 <Style TargetType="TextBox">
                     <Setter Property="BorderBrush" Value="Gray"/>
@@ -174,7 +177,7 @@
             </TextBox.Template>
         </TextBox>
 
-        <TextBox x:Name="phonenumber" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="4" TextWrapping="Wrap" Text="Номер телефона" VerticalAlignment="Center" Width="160" Height="36" FontWeight="Bold">
+        <TextBox x:Name="phonenumber" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="4" TextWrapping="Wrap" Text="{Binding NickName}" VerticalAlignment="Center" Width="160" Height="36" FontWeight="Bold">
             <TextBox.Style>
                 <Style TargetType="TextBox">
                     <Setter Property="BorderBrush" Value="Gray"/>
@@ -193,6 +196,6 @@
                 </ControlTemplate>
             </TextBox.Template>
         </TextBox>
-        <PasswordBox Grid.Column="2" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" Width="160" Height="30"/>
+        <PasswordBox Grid.Column="2" PasswordChanged="PasswordBox_PasswordChanged"  HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" Width="160" Height="30"/> 
     </Grid>
 </Page>
