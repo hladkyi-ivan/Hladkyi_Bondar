@@ -119,7 +119,25 @@
                 </TextBox.Template>
             </TextBox>
             <Label Content="Пароль"/>
-            <PasswordBox PasswordChanged="PasswordBox_PasswordChanged" Height="25" Width="160"/>
+            <PasswordBox x:Name="pasword" 
+         PasswordChanged="PasswordBox_PasswordChanged"
+         Grid.Column="4" 
+         HorizontalAlignment="Center" 
+         Grid.Row="5" 
+         VerticalAlignment="Top" 
+         Width="160" 
+         Height="23">
+                <PasswordBox.Template>
+                    <ControlTemplate TargetType="PasswordBox">
+                        <Border Background="White" 
+BorderBrush="Black" 
+BorderThickness="0.5" 
+CornerRadius="10">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                    </ControlTemplate>
+                </PasswordBox.Template>
+            </PasswordBox>
         </StackPanel>
         <Button Content="Реєстрація" Command="{Binding RegisterCommand}" BorderBrush="White" FontWeight="Bold" Grid.Column="3" Margin="40,296,40,74" Grid.Row="1">
             <Button.Background>

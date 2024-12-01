@@ -64,19 +64,19 @@
             </Button.Template>
         </Button>
         <PasswordBox x:Name="pasword" 
-             PasswordChanged="PasswordBox_PasswordChanged"
-             Grid.Column="4" 
-             HorizontalAlignment="Center" 
-             Grid.Row="5" 
-             VerticalAlignment="Top" 
-             Width="196" 
-             Height="18">
+ PasswordChanged="PasswordBox_PasswordChanged"
+ Grid.Column="4" 
+ HorizontalAlignment="Center" 
+ Grid.Row="5" 
+ VerticalAlignment="Top" 
+ Width="196" 
+ Height="18">
             <PasswordBox.Template>
                 <ControlTemplate TargetType="PasswordBox">
                     <Border Background="White" 
-                    BorderBrush="Black" 
-                    BorderThickness="1" 
-                    CornerRadius="0">
+        BorderBrush="Black" 
+        BorderThickness="0.5" 
+        CornerRadius="10">
                         <ScrollViewer x:Name="PART_ContentHost"/>
                     </Border>
                 </ControlTemplate>
