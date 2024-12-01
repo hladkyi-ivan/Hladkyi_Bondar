@@ -72,6 +72,6 @@
             <TextBlock TextWrapping="Wrap" Text="{Binding SecondNameProfile}" Width="208" Height="20"/>
         </StackPanel>
         <Button Grid.Column="1" Content="Мої квитки" HorizontalAlignment="Center" Margin="0,62,0,0" Grid.Row="3" VerticalAlignment="Top" Height="20" Width="65"/>
-        <Button Grid.Column="2" Content="Вийти" HorizontalAlignment="Center" Margin="0,62,0,0" Grid.Row="3" VerticalAlignment="Top" Height="20" Width="65"/>
+        <Button Grid.Column="2" Content="Вийти" HorizontalAlignment="Center" Margin="0,62,0,0" Grid.Row="3" VerticalAlignment="Top" Height="20" Width="65" Command="{Binding LogOutCommand}"/>
     </Grid>
 </Page>

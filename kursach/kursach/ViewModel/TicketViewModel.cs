@@ -74,9 +74,9 @@ namespace kursach.ViewModel
         {
             Tickets = new ObservableCollection<Ticket>
             {
-                new Ticket { 
-                    Destination = "Egypt", 
-                    Date = new DateTime(2024, 12, 6), 
+                new Ticket {
+                    Destination = "Egypt",
+                    Date = new DateTime(2024, 12, 6),
                     Description = "Grand Blue Saint Maria Aqua Park 3*\nЄгипет, Hurghada",
                     HotelImage = "/egipt.jpg",
                     Period = "Період: Hurghada   Виліт: 06.12.2024   Ночей: 7",
@@ -85,9 +85,9 @@ namespace kursach.ViewModel
                     Departure = "Warsaw",
                     HotelName = "Grand Blue Saint Maria Aqua Park 3*"
                 },
-                new Ticket { 
-                    Destination = "Paris", 
-                    Date = new DateTime(2023, 8, 20), 
+                new Ticket {
+                    Destination = "Paris",
+                    Date = new DateTime(2024, 8, 20),
                     Description = "Le Grand Hotel Paris 4*\nФранція, Париж",
                     HotelImage = "/egipt.jpg",
                     Period = "Період: Paris   Виліт: 20.08.2023   Ночей: 5",
@@ -96,9 +96,108 @@ namespace kursach.ViewModel
                     Departure = "London",
                     HotelName = "Le Grand Hotel Paris"
                 },
-                new Ticket { 
-                    Destination = "Rome", 
-                    Date = new DateTime(2023, 6, 10), 
+                new Ticket {
+                    Destination = "Rome",
+                    Date = new DateTime(2025, 6, 10),
+                    Description = "Roma Palace Hotel 4*\nІталія, Рим",
+                    HotelImage = "/egipt.jpg",
+                    Period = "Період: Rome   Виліт: 10.06.2023   Ночей: 6",
+                    TicketAvailability = "Наявність квитків: ✔",
+                    Price = "30 800 UAH",
+                    Departure = "Paris",
+                    HotelName = "Roma Palace Hotel"
+                },
+                  new Ticket {
+                    Destination = "Egypt",
+                    Date = new DateTime(2024, 12, 6),
+                    Description = "Grand Blue Saint Maria Aqua Park 3*\nЄгипет, Hurghada",
+                    HotelImage = "/egipt.jpg",
+                    Period = "Період: Hurghada   Виліт: 06.12.2024   Ночей: 7",
+                    TicketAvailability = "Наявність квитків: ✔",
+                    Price = "28 236 UAH",
+                    Departure = "Warsaw",
+                    HotelName = "Grand Blue Saint Maria Aqua Park 3*"
+                },
+                new Ticket {
+                    Destination = "Paris",
+                    Date = new DateTime(2024, 8, 20),
+                    Description = "Le Grand Hotel Paris 4*\nФранція, Париж",
+                    HotelImage = "/egipt.jpg",
+                    Period = "Період: Paris   Виліт: 20.08.2023   Ночей: 5",
+                    TicketAvailability = "Наявність квитків: ✔",
+                    Price = "32 450 UAH",
+                    Departure = "London",
+                    HotelName = "Le Grand Hotel Paris"
+                },
+                new Ticket {
+                    Destination = "Rome",
+                    Date = new DateTime(2025, 6, 10),
+                    Description = "Roma Palace Hotel 4*\nІталія, Рим",
+                    HotelImage = "/egipt.jpg",
+                    Period = "Період: Rome   Виліт: 10.06.2023   Ночей: 6",
+                    TicketAvailability = "Наявність квитків: ✔",
+                    Price = "30 800 UAH",
+                    Departure = "Paris",
+                    HotelName = "Roma Palace Hotel"
+                },
+                new Ticket {
+                    Destination = "Egypt",
+                    Date = new DateTime(2024, 12, 6),
+                    Description = "Grand Blue Saint Maria Aqua Park 3*\nЄгипет, Hurghada",
+                    HotelImage = "/egipt.jpg",
+                    Period = "Період: Hurghada   Виліт: 06.12.2024   Ночей: 7",
+                    TicketAvailability = "Наявність квитків: ✔",
+                    Price = "28 236 UAH",
+                    Departure = "Warsaw",
+                    HotelName = "Grand Blue Saint Maria Aqua Park 3*"
+                },
+                new Ticket {
+                    Destination = "Paris",
+                    Date = new DateTime(2024, 8, 20),
+                    Description = "Le Grand Hotel Paris 4*\nФранція, Париж",
+                    HotelImage = "/egipt.jpg",
+                    Period = "Період: Paris   Виліт: 20.08.2023   Ночей: 5",
+                    TicketAvailability = "Наявність квитків: ✔",
+                    Price = "32 450 UAH",
+                    Departure = "London",
+                    HotelName = "Le Grand Hotel Paris"
+                },
+                new Ticket {
+                    Destination = "Rome",
+                    Date = new DateTime(2025, 6, 10),
+                    Description = "Roma Palace Hotel 4*\nІталія, Рим",
+                    HotelImage = "/egipt.jpg",
+                    Period = "Період: Rome   Виліт: 10.06.2023   Ночей: 6",
+                    TicketAvailability = "Наявність квитків: ✔",
+                    Price = "30 800 UAH",
+                    Departure = "Paris",
+                    HotelName = "Roma Palace Hotel"
+                },
+                  new Ticket {
+                    Destination = "Egypt",
+                    Date = new DateTime(2024, 12, 6),
+                    Description = "Grand Blue Saint Maria Aqua Park 3*\nЄгипет, Hurghada",
+                    HotelImage = "/egipt.jpg",
+                    Period = "Період: Hurghada   Виліт: 06.12.2024   Ночей: 7",
+                    TicketAvailability = "Наявність квитків: ✔",
+                    Price = "28 236 UAH",
+                    Departure = "Warsaw",
+                    HotelName = "Grand Blue Saint Maria Aqua Park 3*"
+                },
+                new Ticket {
+                    Destination = "Paris",
+                    Date = new DateTime(2024, 8, 20),
+                    Description = "Le Grand Hotel Paris 4*\nФранція, Париж",
+                    HotelImage = "/egipt.jpg",
+                    Period = "Період: Paris   Виліт: 20.08.2023   Ночей: 5",
+                    TicketAvailability = "Наявність квитків: ✔",
+                    Price = "32 450 UAH",
+                    Departure = "London",
+                    HotelName = "Le Grand Hotel Paris"
+                },
+                new Ticket {
+                    Destination = "Rome",
+                    Date = new DateTime(2025, 6, 10),
                     Description = "Roma Palace Hotel 4*\nІталія, Рим",
                     HotelImage = "/egipt.jpg",
                     Period = "Період: Rome   Виліт: 10.06.2023   Ночей: 6",

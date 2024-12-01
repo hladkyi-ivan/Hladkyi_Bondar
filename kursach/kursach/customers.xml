@@ -98,4 +98,11 @@
     <Password>312312312312</Password>
     <PhoneNumber>3123213123</PhoneNumber>
   </Customer>
+  <Customer>
+    <FirstName>321312312</FirstName>
+    <SecondName>312312312</SecondName>
+    <NickName>LLL</NickName>
+    <Password>LLL</Password>
+    <PhoneNumber>+e221412412</PhoneNumber>
+  </Customer>
 </ArrayOfCustomer>
