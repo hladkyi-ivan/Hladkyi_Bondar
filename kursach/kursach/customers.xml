@@ -91,4 +91,11 @@
     <Password>qwerty123</Password>
     <PhoneNumber>+380981773290</PhoneNumber>
   </Customer>
+  <Customer>
+    <FirstName>21312312</FirstName>
+    <SecondName>312312312</SecondName>
+    <NickName>22312312312312</NickName>
+    <Password>312312312312</Password>
+    <PhoneNumber>3123213123</PhoneNumber>
+  </Customer>
 </ArrayOfCustomer>

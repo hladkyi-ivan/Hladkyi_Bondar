@@ -4,10 +4,14 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:kursach"
+      xmlns:vm="clr-namespace:kursach.ViewModel"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="buying">
 
+    <Page.DataContext>
+        <vm:TicketViewModel />
+    </Page.DataContext>
     <Grid Background="#FFFFE4E6">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="40"/>

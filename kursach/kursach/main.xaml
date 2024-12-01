@@ -68,31 +68,24 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            
-            <Border Grid.Row="0" Background="White" Margin="17,20,3,0" Height="140">
-                <StackPanel Orientation="Horizontal">
-                    <Image Width="150" Height="100" Source="/egipt.jpg" OpacityMask="Black" />
-                    <StackPanel Orientation="Vertical" Width="400">
-                        <TextBlock Text="Grand Blue Saint Maria Aqua Park 3*" FontSize="16" FontWeight="Bold" />
-                        <TextBlock Text="Єгипет, Hurghada" Foreground="DarkOrange" />
-                        <TextBlock Text="Період: Hurghada   Виліт: 06.12.2024   Ночей: 7" Foreground="Gray" Margin="0,5,0,0" />
-                        <TextBlock Text="Standard Garden View | DBL | сніданок та вечеря" Margin="0,5,0,0" />
-                        <TextBlock Text="Наявність квитків: ✔" Foreground="Green" Margin="0,5,0,0" />
-                        <TextBlock Text="EGY: Hurghada from Warsaw (for residents of Ukraine only)" FontSize="10" Foreground="Gray" Margin="0,5,0,0" />
-                    </StackPanel>
-                    <StackPanel Orientation="Vertical" HorizontalAlignment="Right">
-                        <TextBlock Text="28 236 UAH" FontSize="18" FontWeight="Bold" Foreground="Black" HorizontalAlignment="Right" />
-                        <Button Content="Придбати" Background="Green" Foreground="White" Width="100" Height="30" Margin="10,10,0,0" />
-                    </StackPanel>
-                </StackPanel>
-            </Border>
-
-            <ListBox Grid.Row="1" ItemsSource="{Binding TicketViewModel.FiltertedTickets}" Margin="10,20,10,10">
+            <ListBox Grid.Row="1" ItemsSource="{Binding TicketViewModel.FiltertedTickets}" Margin="10,20,-70,10">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel>
-                            <TextBlock Text="{Binding HotelName}" FontSize="16" Width="400" FontWeight="Bold" />
-                        </StackPanel>
+                        <Border Background="White" Margin="0,0,0,10" Padding="10">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Width="150" Height="100" Source="{Binding HotelImage}" OpacityMask="Black" />
+                                <StackPanel Orientation="Vertical" Width="400" Margin="10,0,0,0">
+                                    <TextBlock Text="{Binding Description}" FontSize="16" FontWeight="Bold" TextWrapping="Wrap" />
+                                    <TextBlock Text="{Binding Destination}" Foreground="DarkOrange" />
+                                    <TextBlock Text="{Binding Period}" Foreground="Gray" Margin="0,5,0,0" />
+                                    <TextBlock Text="{Binding TicketAvailability}" Foreground="Green" Margin="0,5,0,0" />
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" HorizontalAlignment="Right">
+                                    <TextBlock Text="{Binding Price}" FontSize="18" FontWeight="Bold" Foreground="Black" HorizontalAlignment="Right" />
+                                    <Button Content="Придбати" Background="Green" Foreground="White" Width="100" Height="30" Margin="10,10,0,0" Command="{Binding DataContext.TicketViewModel.BuyCommand, RelativeSource={RelativeSource AncestorType=ListBox}}"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
