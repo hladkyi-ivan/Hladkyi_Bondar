@@ -68,7 +68,7 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <ListBox Grid.Row="1" ItemsSource="{Binding TicketViewModel.FiltertedTickets}" Margin="10,20,-70,10">
+            <ListBox Grid.Row="1" ItemsSource="{Binding TicketViewModel.FiltertedTickets}" Margin="10,20,-70,10" ScrollViewer.CanContentScroll="False">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Border Background="White" Margin="0,0,0,10" Padding="10">
