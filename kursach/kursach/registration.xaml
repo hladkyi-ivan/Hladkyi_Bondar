@@ -55,7 +55,7 @@
             TextWrapping="Wrap" 
             Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}" 
             Width="160" 
-            Foreground="Gray" Height="23" TextChanged="gmail_Копировать2_TextChanged">
+            Foreground="Gray" Height="23">
                 <TextBox.Template>
                     <ControlTemplate TargetType="{x:Type TextBox}">
                         <Border Background="White" 

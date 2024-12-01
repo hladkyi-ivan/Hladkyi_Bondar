@@ -105,4 +105,18 @@
     <Password>LLL</Password>
     <PhoneNumber>+e221412412</PhoneNumber>
   </Customer>
+  <Customer>
+    <FirstName>123</FirstName>
+    <SecondName>213</SecondName>
+    <NickName>3123</NickName>
+    <Password>3123124</Password>
+    <PhoneNumber>312</PhoneNumber>
+  </Customer>
+  <Customer>
+    <FirstName>123</FirstName>
+    <SecondName>123</SecondName>
+    <NickName>312</NickName>
+    <Password>123</Password>
+    <PhoneNumber>2133</PhoneNumber>
+  </Customer>
 </ArrayOfCustomer>
