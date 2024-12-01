@@ -16,6 +16,11 @@ namespace kursach.ViewModel
             _execute = execute;
             _canExecute = canExecute;
         }
+        public RelayCommand(Action execute, Func<bool> canExecute = null)
+        {
+            _execute = _ => execute();
+            _canExecute = _ => canExecute?.Invoke() ?? true;
+        }
         public event EventHandler CanExecuteChanged;
         public bool CanExecute(object parameter) => _canExecute == null || _canExecute(parameter);
         public void Execute(object parameter) => _execute(parameter);

@@ -53,7 +53,7 @@
             <Label Content="Ім'я" Height="24"/>
             <TextBox x:Name="gmail_Копировать2" 
             TextWrapping="Wrap" 
-            Text="{Binding NickName, UpdateSourceTrigger=PropertyChanged}" 
+            Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}" 
             Width="160" 
             Foreground="Gray" Height="23" TextChanged="gmail_Копировать2_TextChanged">
                 <TextBox.Template>
@@ -70,7 +70,7 @@
             <Label Content="Прізвище"/>
             <TextBox x:Name="gmail_Копировать1" 
             TextWrapping="Wrap" 
-            Text="{Binding NickName, UpdateSourceTrigger=PropertyChanged}" 
+            Text="{Binding SecondName, UpdateSourceTrigger=PropertyChanged}" 
             Width="160" 
             Foreground="Gray" Height="23">
                 <TextBox.Template>
@@ -85,9 +85,9 @@
                 </TextBox.Template>
             </TextBox>
             <Label Content="Номер телефона" Height="23"/>
-            <TextBox x:Name="gmail_Копировать" 
+            <TextBox  
             TextWrapping="Wrap" 
-            Text="{Binding NickName, UpdateSourceTrigger=PropertyChanged}" 
+            Text="{Binding PhoneNumber, UpdateSourceTrigger=PropertyChanged}" 
             Width="160" 
             Foreground="Gray" Height="23">
                 <TextBox.Template>

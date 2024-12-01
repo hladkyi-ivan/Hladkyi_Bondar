@@ -46,6 +46,82 @@ namespace kursach.ViewModel
             get => _phoneNumber;
             set { _phoneNumber = value; OnPropertyChanged(); }
         }
+        public string PhoneNumberProfile
+        {
+            get
+            {
+                if (CustomerService.CurrentCustomer != null)
+                {
+                    return CustomerService.CurrentCustomer.PhoneNumber;
+                }
+                else { return ""; }
+            }
+            set
+            {
+                if (_phoneNumber != value)
+                {
+                    _phoneNumber = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        public string NickNameProfile
+        {
+            get
+            {
+                if (CustomerService.CurrentCustomer != null)
+                {
+                    return CustomerService.CurrentCustomer.NickName;
+                }
+                else { return ""; }
+            }
+            set
+            {
+                if (_phoneNumber != value)
+                {
+                    _phoneNumber = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        public string FirstNameProfile
+        {
+            get
+            {
+                if (CustomerService.CurrentCustomer != null)
+                {
+                    return CustomerService.CurrentCustomer.FirstName;
+                }
+                else { return ""; }
+            }
+            set
+            {
+                if (_phoneNumber != value)
+                {
+                    _phoneNumber = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        public string SecondNameProfile
+        {
+            get
+            {
+                if (CustomerService.CurrentCustomer != null)
+                {
+                    return CustomerService.CurrentCustomer.SecondName;
+                }
+                else { return ""; }
+            }
+            set
+            {
+                if (_phoneNumber != value)
+                {
+                    _phoneNumber = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
 
         public ICommand LoginCommand { get; }
         public ICommand NavigateToLoginOrProfileCommand { get; }

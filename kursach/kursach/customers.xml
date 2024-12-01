@@ -56,4 +56,39 @@
     <Password>к</Password>
     <PhoneNumber>к</PhoneNumber>
   </Customer>
+  <Customer>
+    <FirstName>11234</FirstName>
+    <SecondName>11234</SecondName>
+    <NickName>11234</NickName>
+    <Password>11234</Password>
+    <PhoneNumber>11234</PhoneNumber>
+  </Customer>
+  <Customer>
+    <FirstName>Ivan</FirstName>
+    <SecondName>Hladkyi</SecondName>
+    <NickName>NickName</NickName>
+    <Password>soluk86</Password>
+    <PhoneNumber>23141241</PhoneNumber>
+  </Customer>
+  <Customer>
+    <FirstName>Hladkyi</FirstName>
+    <SecondName>Ivan</SecondName>
+    <NickName>TESTER</NickName>
+    <Password>TESTER</Password>
+    <PhoneNumber>+4851679284211</PhoneNumber>
+  </Customer>
+  <Customer>
+    <FirstName>ADMIN</FirstName>
+    <SecondName>ADMIN</SecondName>
+    <NickName>ADMINBOSS</NickName>
+    <Password>ADMINBOSS</Password>
+    <PhoneNumber>12312412451</PhoneNumber>
+  </Customer>
+  <Customer>
+    <FirstName>Гена</FirstName>
+    <SecondName>Гладкий</SecondName>
+    <NickName>Genka</NickName>
+    <Password>qwerty123</Password>
+    <PhoneNumber>+380981773290</PhoneNumber>
+  </Customer>
 </ArrayOfCustomer>

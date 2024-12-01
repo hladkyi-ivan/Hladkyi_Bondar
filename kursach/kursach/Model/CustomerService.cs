@@ -16,6 +16,7 @@ namespace kursach.Model
      );
         private List<Customer> _customers;
         public static bool IsUserLoggedIn { get; set; } = false;
+        public static Customer CurrentCustomer { get; private set; }
         public CustomerService()
         {
             if (File.Exists(FilePath))
@@ -39,10 +40,12 @@ namespace kursach.Model
             var customer = GetByNickName(nickName);
             if (customer != null && customer.Password == password)
             {
+                CurrentCustomer = customer;
                 IsUserLoggedIn = true; 
                 return true;
             }
             IsUserLoggedIn = false;
+            CurrentCustomer = null;
             return false;
         }
         public void SaveCustomer(Customer customer)
