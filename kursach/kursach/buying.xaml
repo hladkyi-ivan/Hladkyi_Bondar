@@ -21,7 +21,7 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="40.268"/>
-            <RowDefinition/>
+            <RowDefinition Height="409.732"/>
         </Grid.RowDefinitions>
         <Border BorderThickness="1" Margin="0,0,0,1" BorderBrush="Red" Grid.ColumnSpan="4">
             <Border.Background>
@@ -40,7 +40,7 @@
         </Button>
 
         <!-- Основной StackPanel -->
-        <StackPanel Margin="225,40,1,67" Grid.Column="1" Grid.RowSpan="2" Orientation="Vertical" Grid.ColumnSpan="2" >
+        <StackPanel Margin="225,40,1,55" Grid.Column="1" Grid.RowSpan="2" Orientation="Vertical" Grid.ColumnSpan="2" >
 
             <!-- Первый вложенный StackPanel -->
             <StackPanel Width="270" Height="60" VerticalAlignment="Top" >
@@ -191,7 +191,7 @@
                     </TextBox.Template>
                 </TextBox>
             </StackPanel>
-            <Button Content="Покупка" Height="40" Width="165" BorderBrush="White" FontWeight="Bold">
+            <Button Content="Покупка" Height="49" Width="166" BorderBrush="White" FontWeight="Bold">
                 <Button.Background>
                     <LinearGradientBrush>
                         <GradientStop Color="#FF7ABFC1" Offset="0.321"/>
