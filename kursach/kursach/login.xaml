@@ -15,11 +15,11 @@
     <Grid Background="#FFFFE4E6">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
-            <ColumnDefinition Width="36*"/>
-            <ColumnDefinition Width="91.129"/>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="86.101"/>
             <ColumnDefinition Width="164"/>
             <ColumnDefinition Width="239.914"/>
-            <ColumnDefinition Width="269*"/>
+            <ColumnDefinition/>
 
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -32,7 +32,7 @@
             <RowDefinition Height="43"/>
             <RowDefinition Height="92"/>
         </Grid.RowDefinitions>
-        <Border BorderThickness="1" Margin="0,1,0,4" BorderBrush="Red" Grid.ColumnSpan="6" Height="40">
+        <Border BorderThickness="1" Margin="0,1,0,0" BorderBrush="Red" Grid.ColumnSpan="6">
             <Border.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF6F1010" Offset="0.438"/>
@@ -43,7 +43,7 @@
 
         </Border>
 
-        <Button Content="Button" Margin="0,1,0,4" Command="{Binding NavigateToMainCommand}" Grid.Column="1" HorizontalAlignment="Center" Width="38" Foreground="{x:Null}" BorderBrush="{x:Null}">
+        <Button Content="Button" Margin="0,1,0,0" Command="{Binding NavigateToMainCommand}" Grid.Column="1" HorizontalAlignment="Center" Width="40" Foreground="{x:Null}" BorderBrush="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="/Без названия (3).png"/>
             </Button.Background>
@@ -91,7 +91,7 @@
          Text="{Binding NickName, UpdateSourceTrigger=PropertyChanged}"
          VerticalAlignment="Center" 
          Width="196" 
-         Foreground="Gray">
+         Foreground="Gray" Height="18">
             <TextBox.Template>
                 <ControlTemplate TargetType="TextBox">
                     <Border Background="White" 
@@ -103,8 +103,8 @@
                 </ControlTemplate>
             </TextBox.Template>
         </TextBox>
-        <Label Grid.Column="4" Content="Login" HorizontalAlignment="Left" Margin="28,10,0,0" Grid.Row="2" VerticalAlignment="Top" Height="29"/>
-        <Label Grid.Column="4" Content="Password" HorizontalAlignment="Left" Margin="28,0,0,0" Grid.Row="4" VerticalAlignment="Center" Height="29"/>
-        <Frame Name="MyFrame" NavigationUIVisibility="Hidden"/>
+        <Label Grid.Column="4" Content="Login" HorizontalAlignment="Left" Margin="28,10,0,0" Grid.Row="2" VerticalAlignment="Top" Height="29" Width="40"/>
+        <Label Grid.Column="4" Content="Password" HorizontalAlignment="Left" Margin="28,0,0,0" Grid.Row="4" VerticalAlignment="Center" Height="29" Width="60"/>
+        <Frame Name="MyFrame" NavigationUIVisibility="Hidden" Grid.ColumnSpan="2" Margin="0,0,35,0"/>
     </Grid>
 </Page>

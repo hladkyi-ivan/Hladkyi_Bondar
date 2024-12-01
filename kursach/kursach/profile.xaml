@@ -24,7 +24,7 @@
             <RowDefinition Height="167"/>
             <RowDefinition Height="201*"/>
         </Grid.RowDefinitions>
-        <Border BorderThickness="1" Margin="0,1,0,0" BorderBrush="Red" Grid.ColumnSpan="4" >
+        <Border BorderThickness="1" BorderBrush="Red" Grid.ColumnSpan="4" >
             <Border.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF6F1010" Offset="0.438"/>
