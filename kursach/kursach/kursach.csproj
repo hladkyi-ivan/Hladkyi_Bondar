@@ -167,5 +167,14 @@
   <ItemGroup>
     <Resource Include="customers.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MainWindow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="egipt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="instagram.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

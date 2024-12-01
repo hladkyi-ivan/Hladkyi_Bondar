@@ -54,5 +54,10 @@ namespace kursach
                 viewModel.Password = passwordBox.Password;
             }
         }
+
+        private void gmail_Копировать2_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

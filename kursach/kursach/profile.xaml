@@ -11,17 +11,17 @@
     <Page.DataContext>
         <vm:CustomerViewModel />
     </Page.DataContext>
-    <Grid Background="#FF0061BB">
+    <Grid Background="#FFFFE4E6">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="38*"/>
-            <ColumnDefinition Width="229*"/>
-            <ColumnDefinition Width="276*"/>
+            <ColumnDefinition Width="229"/>
+            <ColumnDefinition Width="276"/>
             <ColumnDefinition Width="257*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="40*"/>
-            <RowDefinition Height="42*"/>
-            <RowDefinition Height="167*"/>
+            <RowDefinition Height="42"/>
+            <RowDefinition Height="167"/>
             <RowDefinition Height="201*"/>
         </Grid.RowDefinitions>
         <Border BorderThickness="1" Margin="0,1,0,0" BorderBrush="Red" Grid.ColumnSpan="4" >
@@ -55,21 +55,21 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <StackPanel Grid.Column="2" Margin="3,41,6,132" Orientation="Horizontal" Grid.Row="1" Grid.RowSpan="2">
-            <TextBlock TextWrapping="Wrap" Text="Gmail:" Width="35"/>
-            <TextBlock TextWrapping="Wrap" Text="" Width="232" Height="17"/>
+        <StackPanel Grid.Column="2" Margin="1,17,8,130" Orientation="Horizontal" Grid.Row="2">
+            <TextBlock TextWrapping="Wrap" Text="Gmail:" Width="35" Height="20"/>
+            <TextBlock TextWrapping="Wrap" Text="" Width="232" Height="20"/>
         </StackPanel>
-        <StackPanel Grid.Column="2" Margin="3,41,6,90" Orientation="Horizontal" Grid.Row="2">
-            <TextBlock TextWrapping="Wrap" Width="96"><Run Language="ru-ru" Text="Номер телефона"/><Run Text=":"/></TextBlock>
-            <TextBlock TextWrapping="Wrap" Text="" Width="170" Height="17"/>
+        <StackPanel Grid.Column="2" Margin="0,52,9,90" Orientation="Horizontal" Grid.Row="2" Height="25">
+            <TextBlock TextWrapping="Wrap" Width="99" Height="20"><Run Language="ru-ru" Text="Номер телефона"/><Run Text=":"/></TextBlock>
+            <TextBlock TextWrapping="Wrap" Text="" Width="170" Height="20"/>
         </StackPanel>
-        <StackPanel Grid.Column="2" Margin="3,83,6,48" Orientation="Horizontal" Grid.Row="2">
-            <TextBlock TextWrapping="Wrap" Text="Ім'я:" Width="35"/>
-            <TextBlock TextWrapping="Wrap" Text="" Width="233" Height="17"/>
+        <StackPanel Grid.Column="2" Margin="1,92,9,50" Orientation="Horizontal" Grid.Row="2" Height="25">
+            <TextBlock TextWrapping="Wrap" Text="Ім'я:" Width="35" Height="20"/>
+            <TextBlock TextWrapping="Wrap" Text="" Width="233" Height="20"/>
         </StackPanel>
-        <StackPanel Grid.Column="2" Margin="3,126,6,5" Orientation="Horizontal" Grid.Row="2">
+        <StackPanel Grid.Column="2" Margin="0,132,9,10" Orientation="Horizontal" Grid.Row="2" Height="25">
             <TextBlock TextWrapping="Wrap" Text="Прізвище:" Width="59"/>
-            <TextBlock TextWrapping="Wrap" Text="" Width="208" Height="17"/>
+            <TextBlock TextWrapping="Wrap" Text="" Width="208" Height="20"/>
         </StackPanel>
         <Button Grid.Column="1" Content="Мої квитки" HorizontalAlignment="Center" Margin="0,62,0,0" Grid.Row="3" VerticalAlignment="Top" Height="20" Width="65"/>
     </Grid>

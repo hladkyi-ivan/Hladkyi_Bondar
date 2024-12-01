@@ -11,23 +11,19 @@
     <Page.DataContext>
         <vm:CustomerViewModel />
     </Page.DataContext>
-    <Grid Background="#FF0061BB" >
+    <Grid Background="#FFFFE4E6" >
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="37*"/>
-            <ColumnDefinition Width="497*"/>
-            <ColumnDefinition Width="158*"/>
-            <ColumnDefinition Width="108*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="256"/>
+            <ColumnDefinition Width="185.5"/>
+            <ColumnDefinition Width="217.5"/>
+            <ColumnDefinition Width="104"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="40*"/>
-            <RowDefinition Height="103*"/>
-            <RowDefinition Height="44*"/>
-            <RowDefinition Height="41*"/>
-            <RowDefinition Height="46*"/>
-            <RowDefinition Height="50*"/>
-            <RowDefinition Height="126*"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="410"/>
         </Grid.RowDefinitions>
-        <Border BorderThickness="1" BorderBrush="Red" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="4">
+        <Border BorderThickness="1" BorderBrush="Red" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="5">
             <Border.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="-1"/>
@@ -51,151 +47,140 @@
                 <ImageBrush ImageSource="/Без названия (3).png"/>
             </Button.Background>
         </Button>
-        <Label Content="Registration" HorizontalAlignment="Left" Margin="10,36,0,0" Grid.Row="1" VerticalAlignment="Top" FontFamily="Bernard MT Condensed" FontSize="48" Grid.Column="1" Height="67" Width="234"/>
-        <Button Grid.Column="1" Content="Button"  Click="Openurl_google" HorizontalAlignment="Left" Margin="62,1,0,2" Grid.Row="5" Width="40" BorderBrush="{x:Null}" Foreground="{x:Null}">
-            <Button.Background>
-                <ImageBrush ImageSource="/google (1).jpg" TileMode="None" Stretch="UniformToFill"/>
-            </Button.Background>
-            <Button.Template>
-                <ControlTemplate TargetType="Button">
-                    <Border Background="{TemplateBinding Background}" 
-                    BorderBrush="{TemplateBinding BorderBrush}" 
-                    BorderThickness="1" 
-                    CornerRadius="20">
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                    </Border>
-                </ControlTemplate>
-            </Button.Template>
-        </Button>
-        <Button Grid.Column="1" HorizontalAlignment="Left" Click="Openurl_facebook" Margin="107,1,0,2" Grid.Row="5" Width="40" BorderBrush="{x:Null}" Foreground="{x:Null}">
-            <Button.Background>
-                <ImageBrush ImageSource="/facebook.png"/>
-            </Button.Background>
-            <Button.Template>
-                <ControlTemplate TargetType="Button">
-                    <Border Background="{TemplateBinding Background}" 
-                    BorderBrush="{TemplateBinding BorderBrush}" 
-                    BorderThickness="1" 
-                    CornerRadius="20">
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                    </Border>
-                </ControlTemplate>
-            </Button.Template>
-        </Button>
-        <Button Grid.Column="1" HorizontalAlignment="Left" Click="Openurl_instagram" Margin="152,1,0,2" Grid.Row="5" Width="40" RenderTransformOrigin="-0.017,0.536" BorderBrush="{x:Null}">
-            <Button.Background>
-                <ImageBrush ImageSource="/instagram (1).png"/>
-            </Button.Background>
-            <Button.Template>
-                <ControlTemplate TargetType="Button">
-                    <Border Background="{TemplateBinding Background}" 
-                    BorderBrush="{TemplateBinding BorderBrush}" 
-                    BorderThickness="1" 
-                    CornerRadius="20">
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                    </Border>
-                </ControlTemplate>
-            </Button.Template>
-        </Button>
-        <Label Content="              Реєстрація&#xD;&#xA; за допомогою соцмережі" HorizontalAlignment="Left" Margin="21,0,0,0" Grid.Row="3" VerticalAlignment="Center" FontFamily="Broadway" FontSize="16" FontWeight="Bold" Width="212" Height="51" FontStyle="Italic" Grid.Column="1" Grid.RowSpan="2"/>
-        <Button Grid.Column="2" Content="Реєстрація" Command="{Binding RegisterCommand}" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Center" Height="40" Width="100" BorderBrush="White" FontWeight="Bold">
+        <Label Content="Registration" HorizontalAlignment="Center" Margin="0,31,0,0" Grid.Row="1" VerticalAlignment="Top" FontFamily="Bernard MT Condensed" FontSize="48" Grid.Column="1" Height="67" Width="234"/>
+        <Label Content="              Реєстрація&#xD;&#xA; за допомогою соцмережі" HorizontalAlignment="Center" Margin="0,167,0,0" Grid.Row="1" VerticalAlignment="Top" FontFamily="Broadway" FontSize="16" FontWeight="Bold" Width="212" Height="51" FontStyle="Italic" Grid.Column="1"/>
+        <StackPanel Grid.Column="3" Grid.Row="1" Margin="8,31,15,119">
+            <Label Content="Ім'я" Height="24"/>
+            <TextBox x:Name="gmail_Копировать2" 
+            TextWrapping="Wrap" 
+            Text="{Binding NickName, UpdateSourceTrigger=PropertyChanged}" 
+            Width="160" 
+            Foreground="Gray" Height="23" TextChanged="gmail_Копировать2_TextChanged">
+                <TextBox.Template>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border Background="White" 
+                        BorderBrush="Gray" 
+                        BorderThickness="1" 
+                        CornerRadius="10">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                    </ControlTemplate>
+                </TextBox.Template>
+            </TextBox>
+            <Label Content="Прізвище"/>
+            <TextBox x:Name="gmail_Копировать1" 
+            TextWrapping="Wrap" 
+            Text="{Binding NickName, UpdateSourceTrigger=PropertyChanged}" 
+            Width="160" 
+            Foreground="Gray" Height="23">
+                <TextBox.Template>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border Background="White" 
+                        BorderBrush="Gray" 
+                        BorderThickness="1" 
+                        CornerRadius="10">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                    </ControlTemplate>
+                </TextBox.Template>
+            </TextBox>
+            <Label Content="Номер телефона" Height="23"/>
+            <TextBox x:Name="gmail_Копировать" 
+            TextWrapping="Wrap" 
+            Text="{Binding NickName, UpdateSourceTrigger=PropertyChanged}" 
+            Width="160" 
+            Foreground="Gray" Height="23">
+                <TextBox.Template>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border Background="White" 
+                        BorderBrush="Gray" 
+                        BorderThickness="1" 
+                        CornerRadius="10">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                    </ControlTemplate>
+                </TextBox.Template>
+            </TextBox>
+            <Label Content="Логін"/>
+            <TextBox x:Name="gmail" 
+            TextWrapping="Wrap" 
+            Text="{Binding NickName, UpdateSourceTrigger=PropertyChanged}" 
+            Width="160" 
+            Foreground="Gray" Height="23">
+                <TextBox.Template>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border Background="White" 
+                        BorderBrush="Gray" 
+                        BorderThickness="1" 
+                        CornerRadius="10">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                    </ControlTemplate>
+                </TextBox.Template>
+            </TextBox>
+            <Label Content="Пароль"/>
+            <PasswordBox PasswordChanged="PasswordBox_PasswordChanged" Height="25" Width="160"/>
+        </StackPanel>
+        <Button Content="Реєстрація" Command="{Binding RegisterCommand}" BorderBrush="White" FontWeight="Bold" Grid.Column="3" Margin="40,296,40,74" Grid.Row="1">
             <Button.Background>
                 <LinearGradientBrush>
                     <GradientStop Color="#FF7ABFC1" Offset="0.321"/>
                 </LinearGradientBrush>
             </Button.Background>
             <Button.Template>
-                <ControlTemplate TargetType="Button">
+                <ControlTemplate TargetType="{x:Type Button}">
                     <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1" CornerRadius="20" Margin="0,0,0,7">
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Border>
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <TextBox x:Name="Name" Text="{Binding FirstName}" Grid.Column="2" HorizontalAlignment="Center" Margin="0,57,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="160" Height="35" FontWeight="Bold">
-            <TextBox.Style>
-                <Style TargetType="TextBox">
-                    <Setter Property="BorderBrush" Value="Gray"/>
-                    <Setter Property="BorderThickness" Value="1"/>
-                    <Setter Property="Background" Value="White"/>
-                    <Setter Property="Padding" Value="5"/>
-                    <Setter Property="Height" Value="30"/>
-                    <Setter Property="Width" Value="160"/>
-                    <Style.Triggers>
-                        <Trigger Property="IsFocused" Value="True">
-                            <Setter Property="BorderBrush" Value="Blue"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </TextBox.Style>
-            <TextBox.Template>
-                <ControlTemplate TargetType="TextBox">
-                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}" CornerRadius="10">
-                        <ScrollViewer x:Name="PART_ContentHost" />
-                    </Border>
-                </ControlTemplate>
-            </TextBox.Template>
-        </TextBox>
-
-        <TextBox x:Name="SecondName" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" Text="{Binding SecondName}" VerticalAlignment="Top" Width="160" Height="37" FontWeight="Bold">
-            <TextBox.Style>
-                <Style TargetType="TextBox">
-                    <Setter Property="BorderBrush" Value="Gray"/>
-                    <Setter Property="BorderThickness" Value="1"/>
-                    <Setter Property="Background" Value="White"/>
-                    <Setter Property="Padding" Value="5"/>
-                    <Setter Property="Height" Value="30"/>
-                    <Setter Property="Width" Value="160"/>
-                </Style>
-            </TextBox.Style>
-            <TextBox.Template>
-                <ControlTemplate TargetType="TextBox">
-                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}" CornerRadius="10">
-                        <ScrollViewer x:Name="PART_ContentHost" />
-                    </Border>
-                </ControlTemplate>
-            </TextBox.Template>
-        </TextBox>
-
-        <TextBox x:Name="Gmail" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="3" TextWrapping="Wrap" Text="{Binding PhoneNumber}" VerticalAlignment="Center" Width="160" Height="36" FontWeight="Bold">
-            <TextBox.Style>
-                <Style TargetType="TextBox">
-                    <Setter Property="BorderBrush" Value="Gray"/>
-                    <Setter Property="BorderThickness" Value="1"/>
-                    <Setter Property="Background" Value="White"/>
-                    <Setter Property="Padding" Value="5"/>
-                    <Setter Property="Height" Value="30"/>
-                    <Setter Property="Width" Value="160"/>
-                </Style>
-            </TextBox.Style>
-            <TextBox.Template>
-                <ControlTemplate TargetType="TextBox">
-                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}" CornerRadius="10">
-                        <ScrollViewer x:Name="PART_ContentHost" />
-                    </Border>
-                </ControlTemplate>
-            </TextBox.Template>
-        </TextBox>
-
-        <TextBox x:Name="phonenumber" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="4" TextWrapping="Wrap" Text="{Binding NickName}" VerticalAlignment="Center" Width="160" Height="36" FontWeight="Bold">
-            <TextBox.Style>
-                <Style TargetType="TextBox">
-                    <Setter Property="BorderBrush" Value="Gray"/>
-                    <Setter Property="BorderThickness" Value="1"/>
-                    <Setter Property="Background" Value="White"/>
-                    <Setter Property="Padding" Value="5"/>
-                    <Setter Property="Height" Value="30"/>
-                    <Setter Property="Width" Value="160"/>
-                </Style>
-            </TextBox.Style>
-            <TextBox.Template>
-                <ControlTemplate TargetType="TextBox">
-                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}" CornerRadius="10">
-                        <ScrollViewer x:Name="PART_ContentHost" />
-                    </Border>
-                </ControlTemplate>
-            </TextBox.Template>
-        </TextBox>
-        <PasswordBox Grid.Column="2" PasswordChanged="PasswordBox_PasswordChanged"  HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" Width="160" Height="30"/> 
+        <StackPanel Grid.Column="1" Grid.Row="1" Margin="60,223,60,139" Orientation="Horizontal">
+            <Button Content="Button"  Click="Openurl_google" Width="40" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="47">
+                <Button.Background>
+                    <ImageBrush ImageSource="/google (1).jpg" TileMode="None" Stretch="UniformToFill"/>
+                </Button.Background>
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" 
+                    BorderBrush="{TemplateBinding BorderBrush}" 
+                    BorderThickness="1" 
+                    CornerRadius="20">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Click="Openurl_facebook" Width="40" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="48" RenderTransformOrigin="0.325,0.67">
+                <Button.Background>
+                    <ImageBrush ImageSource="/facebook.png"/>
+                </Button.Background>
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" 
+                    BorderBrush="{TemplateBinding BorderBrush}" 
+                    BorderThickness="1" 
+                    CornerRadius="20">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Click="Openurl_instagram" Width="40" RenderTransformOrigin="-0.017,0.536" BorderBrush="{x:Null}" Height="47">
+                <Button.Background>
+                    <ImageBrush ImageSource="/instagram (1).png"/>
+                </Button.Background>
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" 
+                    BorderBrush="{TemplateBinding BorderBrush}" 
+                    BorderThickness="1" 
+                    CornerRadius="20">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </StackPanel>
     </Grid>
 </Page>

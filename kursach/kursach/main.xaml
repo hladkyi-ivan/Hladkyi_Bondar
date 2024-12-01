@@ -11,17 +11,17 @@
     <Page.DataContext>
         <vm:CustomerViewModel />
     </Page.DataContext>
-    <Grid Background="#FF0061BB">
+    <Grid Background="#FFFFE4E6">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="359*"/>
-            <ColumnDefinition Width="21*"/>
-            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="710"/>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="17*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
 
-        <Border BorderThickness="1" Margin="0,1,0,0" BorderBrush="Red" Grid.ColumnSpan="3" Height="42">
+        <Border BorderThickness="1" Margin="0,1,0,-3" BorderBrush="Red" Grid.ColumnSpan="3">
             <Border.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF6F1010" Offset="0.438"/>
@@ -47,10 +47,37 @@
             </Button.Background>
         </Button>
 
-        <Button HorizontalAlignment="Left" VerticalAlignment="Center" Width="30" Height="20" BorderBrush="Transparent" Margin="2,0,0,0" Grid.Column="1">
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" Height="20" BorderBrush="Transparent" Grid.Column="1">
             <Button.Background>
                 <ImageBrush ImageSource="/images-preview-removebg-preview.png"/>
             </Button.Background>
         </Button>
+        <StackPanel Orientation="Horizontal" Margin="17,60,3,-154" Background="White" >
+            <!-- Изображение отеля -->
+
+            <!-- Информация о туре -->
+            <!-- Изображение отеля -->
+
+            <!-- Информация о туре -->
+            <!-- Изображение отеля -->
+            <Image Width="150" Height="100" Source="/egipt.jpg" OpacityMask="Black" />
+
+            <!-- Информация о туре -->
+            <StackPanel Orientation="Vertical" Width="400">
+                <TextBlock Text="Grand Blue Saint Maria Aqua Park 3*" FontSize="16" FontWeight="Bold" />
+                <TextBlock Text="Єгипет, Hurghada" Foreground="DarkOrange" />
+                <TextBlock Text="Період: Hurghada   Виліт: 06.12.2024   Ночей: 7" Foreground="Gray" Margin="0,5,0,0" />
+                <TextBlock Text="Standard Garden View | DBL | сніданок та вечеря" Margin="0,5,0,0" />
+                <TextBlock Text="Наявність квитків: ✔" Foreground="Green" Margin="0,5,0,0" />
+                <TextBlock Text="EGY: Hurghada from Warsaw (for residents of Ukraine only)" FontSize="10" Foreground="Gray" Margin="0,5,0,0" />
+            </StackPanel>
+
+            <!-- Цена и кнопка -->
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Right">
+                <TextBlock Text="28 236 UAH" FontSize="18" FontWeight="Bold" Foreground="Black" HorizontalAlignment="Right" />
+                <Button Content="Придбати" Background="Green" Foreground="White" Width="100" Height="30" Margin="10,10,0,0" />
+            </StackPanel>
+        </StackPanel>
+
     </Grid>
 </Page>

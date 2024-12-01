@@ -8,16 +8,16 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="buying">
 
-    <Grid Background="#FF0061BB">
+    <Grid Background="#FFFFE4E6">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20*"/>
-            <ColumnDefinition Width="113*"/>
-            <ColumnDefinition Width="135*"/>
-            <ColumnDefinition Width="132*"/>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="226"/>
+            <ColumnDefinition Width="270"/>
+            <ColumnDefinition Width="264"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="40*"/>
-            <RowDefinition Height="407*"/>
+            <RowDefinition Height="40.268"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Border BorderThickness="1" Margin="0,0,0,1" BorderBrush="Red" Grid.ColumnSpan="4">
             <Border.Background>
