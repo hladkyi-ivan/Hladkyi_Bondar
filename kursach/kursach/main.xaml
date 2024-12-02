@@ -11,11 +11,24 @@
     <Page.DataContext>
         <vm:MainViewModel />
     </Page.DataContext>
+    <Page.Resources>
+        <Style x:Key="RoundedComboBox" TargetType="{x:Type ComboBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ComboBox}">
+                        <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
     <Grid Background="#FFFFE4E6">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="710"/>
-            <ColumnDefinition Width="13*"/>
-            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="705"/>
+            <ColumnDefinition Width="44"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
@@ -30,38 +43,120 @@
                     <GradientStop Color="#FF761414" Offset="0.281"/>
                 </LinearGradientBrush>
             </Border.Background>
-            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal" Margin="10,10,0,0">
+            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal" Margin="10,10,0,0" Width="653">
                 <ComboBox 
-                  Width="130" 
-                  Height="20" 
-                   ItemsSource="{Binding TicketViewModel.PossibleDepartures}"
-                 SelectedValue="{Binding TicketViewModel.DepartureFilter}" 
-                 HorizontalAlignment="Center" 
-                  VerticalAlignment="Center"/>
+                    Width="129" 
+                    Height="20" 
+                    ItemsSource="{Binding TicketViewModel.PossibleDepartures}"
+                    SelectedValue="{Binding TicketViewModel.DepartureFilter}" 
+                    VerticalAlignment="Center">
+                    <ComboBox.Resources>
+                        <Style TargetType="Border">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ComboBox}}" Value="{x:Null}">
+                                    <Setter Property="CornerRadius" Value="10"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ComboBox.Resources>
+                </ComboBox>
 
                 <ComboBox 
-                     Width="130" 
-                       Height="19" 
-                      Margin="10,0,0,0"
-                      ItemsSource="{Binding TicketViewModel.PossibleDestinations}"
-                      SelectedValue="{Binding TicketViewModel.DestinationFilter}" 
-                        HorizontalAlignment="Center" 
-                       VerticalAlignment="Center"/>
+                    Width="130" 
+                    Height="19" 
+                    Margin="10,0,0,0"
+                    ItemsSource="{Binding TicketViewModel.PossibleDestinations}"
+                    SelectedValue="{Binding TicketViewModel.DestinationFilter}" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center">
+                    <ComboBox.Resources>
+                        <Style TargetType="Border">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ComboBox}}" Value="{x:Null}">
+                                    <Setter Property="CornerRadius" Value="10"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ComboBox.Resources>
+                </ComboBox>
+
                 <DatePicker SelectedDate="{Binding TicketViewModel.StartDateFilter}" Width="122" Height="28" Margin="10,0,0,0"/>
-                 <Button Content="Apply Filters" Command="{Binding TicketViewModel.ApplyFiltersCommand}" Width="200" Height="20" Margin="0"/>
+
+                <ComboBox Width="105" Height="17" Margin="0,0,10,0">
+                    <ComboBox.Resources>
+                        <Style TargetType="Border">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ComboBox}}" Value="{x:Null}">
+                                    <Setter Property="CornerRadius" Value="10"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ComboBox.Resources>
+                </ComboBox>
+
+                <Button Content="Apply Filters" Command="{Binding TicketViewModel.ApplyFiltersCommand}" Height="21" Width="132" Background="#FFCA6B29" BorderBrush="Black">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="10" 
+            Background="{TemplateBinding Background}"
+            BorderBrush="{TemplateBinding BorderBrush}"
+            BorderThickness="{TemplateBinding BorderThickness}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
             </StackPanel>
         </Border>
 
-        <Button Grid.Column="2" HorizontalAlignment="Center" Command="{Binding CustomerViewModel.NavigateToLoginOrProfileCommand}"  VerticalAlignment="Center" Height="40" Width="40" BorderBrush="{x:Null}">
+        <Button Grid.Column="2" 
+                HorizontalAlignment="Center" 
+                Command="{Binding CustomerViewModel.NavigateToLoginOrProfileCommand}"  
+                VerticalAlignment="Center" 
+                Height="40" 
+                Width="40" 
+                BorderBrush="{x:Null}">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="10" 
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
             <Button.Background>
                 <ImageBrush ImageSource="/Без_названия-removebg-preview.png"/>
             </Button.Background>
         </Button>
 
         <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" Height="20" BorderBrush="Transparent" Grid.Column="1">
-            <Button.Background>
-                <ImageBrush ImageSource="/images-preview-removebg-preview.png"/>
-            </Button.Background>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <ImageBrush ImageSource="/images-preview-removebg-preview.png"/>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush ImageSource="/images-removebg-preview-removebg-preview.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
         </Button>
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
@@ -83,6 +178,11 @@
                                 <StackPanel Orientation="Vertical" HorizontalAlignment="Right">
                                     <TextBlock Text="{Binding Price}" FontSize="18" FontWeight="Bold" Foreground="Black" HorizontalAlignment="Right" />
                                     <Button Content="Придбати" Background="Green" Foreground="White" Width="100" Height="30" Margin="10,10,0,0" Command="{Binding DataContext.TicketViewModel.BuyCommand, RelativeSource={RelativeSource AncestorType=ListBox}}"/>
+                                    <Button  Height="25" Width="40" BorderBrush="#FFF1DADA" Foreground="{x:Null}">
+                                        <Button.Background>
+                                            <ImageBrush ImageSource="/images-removebg-preview-removebg-preview.png"/>
+                                        </Button.Background>
+                                    </Button>
                                 </StackPanel>
                             </StackPanel>
                         </Border>

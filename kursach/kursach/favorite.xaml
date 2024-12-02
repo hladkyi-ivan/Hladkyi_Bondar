@@ -1,0 +1,36 @@
+﻿<Page x:Class="kursach.favorite"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:kursach"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="favorite">
+
+    <Grid Background="#FFFFE4E6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Border BorderThickness="1" BorderBrush="Red" Grid.ColumnSpan="2">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF6F1010" Offset="0.438"/>
+                    <GradientStop Color="#FFDA4C4C" Offset="1"/>
+                    <GradientStop Color="#FF761414" Offset="0.281"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <Button Content="Button" Command="{Binding NavigateToMainCommand}" HorizontalAlignment="Center" Width="38" Foreground="{x:Null}" BorderBrush="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="/Без названия (3).png"/>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Page>

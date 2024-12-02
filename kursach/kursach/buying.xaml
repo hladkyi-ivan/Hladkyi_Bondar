@@ -39,10 +39,8 @@
             </Button.Background>
         </Button>
 
-        <!-- Основной StackPanel -->
         <StackPanel Margin="225,40,1,55" Grid.Column="1" Grid.RowSpan="2" Orientation="Vertical" Grid.ColumnSpan="2" >
 
-            <!-- Первый вложенный StackPanel -->
             <StackPanel Width="270" Height="60" VerticalAlignment="Top" >
                 <TextBlock TextWrapping="Wrap"><Run Language="ru-ru" Text="Номер картки"/></TextBlock>
                 <TextBox TextWrapping="Wrap" Width="250" Height="39" HorizontalAlignment="Left">
@@ -72,7 +70,6 @@
                 </TextBox>
             </StackPanel>
 
-            <!-- Второй вложенный StackPanel -->
             <StackPanel Width="270" Height="60" VerticalAlignment="Top" >
                 <TextBlock TextWrapping="Wrap" Text="Код безпеки"/>
                 <TextBox TextWrapping="Wrap" Width="250" Height="39" HorizontalAlignment="Left">
@@ -102,7 +99,6 @@
                 </TextBox>
             </StackPanel>
 
-            <!-- Третий вложенный StackPanel -->
             <StackPanel Width="270" Height="60" VerticalAlignment="Top">
                 <TextBlock TextWrapping="Wrap"><Run Language="ru-ru" Text="Т"/><Run Text="ермін придатності"/></TextBlock>
                 <TextBox TextWrapping="Wrap" Width="250" Height="39" HorizontalAlignment="Left">
@@ -132,7 +128,6 @@
                 </TextBox>
             </StackPanel>
 
-            <!-- Четвертый вложенный StackPanel -->
             <StackPanel Width="270" Height="60" VerticalAlignment="Top" >
                 <TextBlock TextWrapping="Wrap" Text="Ім'я власника"/>
                 <TextBox TextWrapping="Wrap" Width="250" Height="39" HorizontalAlignment="Left">
@@ -162,7 +157,6 @@
                 </TextBox>
             </StackPanel>
 
-            <!-- Пятый вложенный StackPanel -->
             <StackPanel Width="270" Height="64">
                 <TextBlock TextWrapping="Wrap" Text="Адреса власника"/>
                 <TextBox TextWrapping="Wrap" Width="250" Height="38" HorizontalAlignment="Left">

@@ -61,6 +61,12 @@
     <Compile Include="buying.xaml.cs">
       <DependentUpon>buying.xaml</DependentUpon>
     </Compile>
+    <Compile Include="favorite.xaml.cs">
+      <DependentUpon>favorite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="history_buying.xaml.cs">
+      <DependentUpon>history_buying.xaml</DependentUpon>
+    </Compile>
     <Compile Include="login.xaml.cs">
       <DependentUpon>login.xaml</DependentUpon>
     </Compile>
@@ -79,6 +85,14 @@
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="ViewModel\TicketViewModel.cs" />
     <Page Include="buying.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="favorite.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="history_buying.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -178,6 +192,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="instagram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images-removebg-preview-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -71,7 +71,29 @@
             <TextBlock TextWrapping="Wrap" Text="Прізвище:" Width="59"/>
             <TextBlock TextWrapping="Wrap" Text="{Binding SecondNameProfile}" Width="208" Height="25"/>
         </StackPanel>
-        <Button Grid.Column="1" Content="Мої квитки" HorizontalAlignment="Center" Margin="0,62,0,0" Grid.Row="3" VerticalAlignment="Top" Height="20" Width="65"/>
-        <Button Grid.Column="2" Content="Вийти" HorizontalAlignment="Center" Margin="0,62,0,0" Grid.Row="3" VerticalAlignment="Top" Height="20" Width="65" Command="{Binding LogOutCommand}"/>
+        <Button Grid.Column="1" Content="Мої квитки" HorizontalAlignment="Center" Margin="0,62,0,0" Grid.Row="3" VerticalAlignment="Top" Height="20" Width="65" BorderBrush="Black" Background="#FF00FF9C">
+                <Button.Template>
+        <ControlTemplate TargetType="Button">
+            <Border CornerRadius="10" 
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
+    </Button.Template>
+</Button>
+        <Button Grid.Column="2" Content="Вийти" HorizontalAlignment="Center" Margin="0,62,0,0" Grid.Row="3" VerticalAlignment="Top" Height="20" Width="65" Command="{Binding LogOutCommand}" Background="#FFFF8000" BorderBrush="Black">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="10" 
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
     </Grid>
 </Page>
