@@ -45,7 +45,7 @@
             </Border.Background>
             <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal" Margin="10,10,0,0" Width="653">
                 <ComboBox 
-                    Width="129" 
+                    Width="89" 
                     Height="20" 
                     ItemsSource="{Binding TicketViewModel.PossibleDepartures}"
                     SelectedValue="{Binding TicketViewModel.DepartureFilter}" 
@@ -62,7 +62,7 @@
                 </ComboBox>
 
                 <ComboBox 
-                    Width="130" 
+                    Width="89" 
                     Height="19" 
                     Margin="10,0,0,0"
                     ItemsSource="{Binding TicketViewModel.PossibleDestinations}"
@@ -80,9 +80,7 @@
                     </ComboBox.Resources>
                 </ComboBox>
 
-                <DatePicker SelectedDate="{Binding TicketViewModel.StartDateFilter}" Width="122" Height="28" Margin="10,0,0,0"/>
-
-                <ComboBox Width="105" Height="17" Margin="0,0,10,0">
+                <ComboBox Width="89" Height="17" Margin="10,0,0,0">
                     <ComboBox.Resources>
                         <Style TargetType="Border">
                             <Style.Triggers>
@@ -94,6 +92,9 @@
                     </ComboBox.Resources>
                 </ComboBox>
 
+                <DatePicker SelectedDate="{Binding TicketViewModel.StartDateFilter}" Width="100" Height="28" Margin="10,0,0,0"/>
+
+          
                 <Button Content="Apply Filters" Command="{Binding TicketViewModel.ApplyFiltersCommand}" Height="21" Width="132" Background="#FFCA6B29" BorderBrush="Black">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
@@ -101,6 +102,18 @@
             Background="{TemplateBinding Background}"
             BorderBrush="{TemplateBinding BorderBrush}"
             BorderThickness="{TemplateBinding BorderThickness}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button Content="Clear" Command="{Binding TicketViewModel.ResetFiltersCommand}" Height="21" Width="40" Background="#FFCA6B29" BorderBrush="Black">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="10" 
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
                                 <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             </Border>
                         </ControlTemplate>
@@ -131,7 +144,7 @@
             </Button.Background>
         </Button>
 
-        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" Height="20" BorderBrush="Transparent" Grid.Column="1">
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" Height="20" BorderBrush="Transparent" Grid.Column="1" Command ="{Binding CustomerViewModel.NavigateToFavoriteCommand}">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border x:Name="border" Background="{TemplateBinding Background}">
@@ -171,8 +184,9 @@
                                 <Image Width="150" Height="100" Source="{Binding HotelImage}" OpacityMask="Black" />
                                 <StackPanel Orientation="Vertical" Width="400" Margin="10,0,0,0">
                                     <TextBlock Text="{Binding Description}" FontSize="16" FontWeight="Bold" TextWrapping="Wrap" />
-                                    <TextBlock Text="{Binding Destination}" Foreground="DarkOrange" />
+                                    <TextBlock Text="{Binding Departure, StringFormat='Відправка з {0}'}" Foreground="DarkOrange" />
                                     <TextBlock Text="{Binding Period}" Foreground="Gray" Margin="0,5,0,0" />
+                                    <TextBlock Text="{Binding Date, StringFormat= 'Виліт: {0}'}" Foreground="Gray" Margin="0,5,0,0"/>
                                     <TextBlock Text="{Binding TicketAvailability}" Foreground="Green" Margin="0,5,0,0" />
                                 </StackPanel>
                                 <StackPanel Orientation="Vertical" HorizontalAlignment="Right">

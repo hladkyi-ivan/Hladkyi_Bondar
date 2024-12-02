@@ -129,6 +129,7 @@ namespace kursach.ViewModel
         public ICommand NavigateToMainCommand { get; }
         public ICommand RegisterCommand {  get; }
         public ICommand LogOutCommand {  get; }
+        public ICommand NavigateToFavoriteCommand { get; }
         public CustomerViewModel()
         {
             LoginCommand = new RelayCommand(Login);
@@ -137,6 +138,24 @@ namespace kursach.ViewModel
             RegisterCommand = new RelayCommand(Register);
             NavigateToMainCommand = new RelayCommand(NavigateToMain);
             LogOutCommand = new RelayCommand(LogOutAndLogin);
+            NavigateToFavoriteCommand = new RelayCommand(NavigateToFavorite);
+        }
+        private void NavigateToFavorite(object parametr)
+        {
+            if (CustomerService.IsUserLoggedIn == true)
+            {
+                if (Application.Current.MainWindow is MainWindow mainWindow)
+                {
+                    mainWindow.MyFrame.Navigate(new Uri("favorite.xaml", UriKind.Relative));
+                }
+            }
+            else
+            {
+                if (Application.Current.MainWindow is MainWindow mainWindow)
+                {
+                    mainWindow.MyFrame.Navigate(new Uri("login.xaml", UriKind.Relative));
+                }
+            }
         }
         private void LogOutAndLogin(object parametr)
         {

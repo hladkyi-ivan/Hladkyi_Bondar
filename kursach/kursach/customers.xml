@@ -119,4 +119,18 @@
     <Password>123</Password>
     <PhoneNumber>2133</PhoneNumber>
   </Customer>
+  <Customer>
+    <FirstName>312</FirstName>
+    <SecondName>312</SecondName>
+    <NickName>44</NickName>
+    <Password>44</Password>
+    <PhoneNumber>312</PhoneNumber>
+  </Customer>
+  <Customer>
+    <FirstName>21312</FirstName>
+    <SecondName>213123</SecondName>
+    <NickName>312312</NickName>
+    <Password>312312</Password>
+    <PhoneNumber>312321</PhoneNumber>
+  </Customer>
 </ArrayOfCustomer>
