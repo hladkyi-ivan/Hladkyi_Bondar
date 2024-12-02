@@ -70,6 +70,20 @@ namespace kursach.ViewModel
         public ICommand ApplyFiltersCommand { get; }
         public ICommand BuyCommand { get; }
         public ICommand ResetFiltersCommand { get; }
+        public ICommand LikeCommand { get; private set; }
+        public ICommand RemoveFromLikedCommand { get; private set; }
+        private static ObservableCollection<Ticket> _likedTickets;
+        public ObservableCollection<Ticket> LikedTickets 
+        { 
+            get 
+            {
+                if (_likedTickets == null)
+                {
+                    _likedTickets = new ObservableCollection<Ticket>();
+                }
+                return _likedTickets;
+            }
+        }
 
         public TicketViewModel()
         {
@@ -191,6 +205,8 @@ namespace kursach.ViewModel
             FiltertedTickets = new ObservableCollection<Ticket>(Tickets);
             ApplyFiltersCommand = new RelayCommand(ApplyFilters);
             BuyCommand = new RelayCommand(Buy);
+            LikeCommand = new RelayCommand(LikeTicket);
+            RemoveFromLikedCommand = new RelayCommand(RemoveFromLiked);
             ResetFiltersCommand = new RelayCommand(ResetFilters);
         }
 
@@ -230,6 +246,38 @@ namespace kursach.ViewModel
                 if(Application.Current.MainWindow is MainWindow mainWindow)
                 {
                     mainWindow.MyFrame.Navigate(new Uri("login.xaml", UriKind.Relative));
+                }
+            }
+        }
+
+        private void LikeTicket(object parameter)
+        {
+            if (parameter is Ticket ticket)
+            {
+                if (!LikedTickets.Any(t => t.HotelName == ticket.HotelName && t.Date == ticket.Date))
+                {
+                    LikedTickets.Add(ticket);
+                    MessageBox.Show("Квиток додано до обраного!", "Добре", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Цей квиток вже є в обраному!", "Інформація", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+        }
+
+        private void RemoveFromLiked(object parameter)
+        {
+            if (parameter is Ticket ticket)
+            {
+                var ticketToRemove = LikedTickets.FirstOrDefault(t => 
+                    t.HotelName == ticket.HotelName && 
+                    t.Date == ticket.Date);
+                
+                if (ticketToRemove != null)
+                {
+                    LikedTickets.Remove(ticketToRemove);
+                    MessageBox.Show("Квиток видалено", "Добре", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
         }

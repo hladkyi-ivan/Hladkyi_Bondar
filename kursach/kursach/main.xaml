@@ -94,7 +94,7 @@
 
                 <DatePicker SelectedDate="{Binding TicketViewModel.StartDateFilter}" Width="100" Height="28" Margin="10,0,0,0"/>
 
-          
+
                 <Button Content="Apply Filters" Command="{Binding TicketViewModel.ApplyFiltersCommand}" Height="21" Width="132" Background="#FFCA6B29" BorderBrush="Black">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
@@ -192,7 +192,7 @@
                                 <StackPanel Orientation="Vertical" HorizontalAlignment="Right">
                                     <TextBlock Text="{Binding Price}" FontSize="18" FontWeight="Bold" Foreground="Black" HorizontalAlignment="Right" />
                                     <Button Content="Придбати" Background="Green" Foreground="White" Width="100" Height="30" Margin="10,10,0,0" Command="{Binding DataContext.TicketViewModel.BuyCommand, RelativeSource={RelativeSource AncestorType=ListBox}}"/>
-                                    <Button  Height="25" Width="40" BorderBrush="#FFF1DADA" Foreground="{x:Null}">
+                                    <Button Height="25" Width="40" BorderBrush="#FFF1DADA" Foreground="{x:Null}" Command="{Binding DataContext.TicketViewModel.LikeCommand, RelativeSource={RelativeSource AncestorType=ListBox}}" CommandParameter="{Binding}">
                                         <Button.Background>
                                             <ImageBrush ImageSource="/images-removebg-preview-removebg-preview.png"/>
                                         </Button.Background>

@@ -122,7 +122,6 @@ namespace kursach.ViewModel
                 }
             }
         }
-
         public ICommand LoginCommand { get; }
         public ICommand NavigateToLoginOrProfileCommand { get; }
         public ICommand NavigateToRegisterCommand {  get; }
@@ -201,7 +200,7 @@ namespace kursach.ViewModel
             if (_repository.ValidateUserCredentials(NickName, Password))
             {
                 CustomerService.IsUserLoggedIn = true;
-                MessageBox.Show("Login successful!", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Вітаємо!", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
                 if (Application.Current.MainWindow is MainWindow mainWindow)
                 {
                     mainWindow.MyFrame.Navigate(new Uri("profile.xaml", UriKind.Relative));
@@ -209,26 +208,26 @@ namespace kursach.ViewModel
             }
             else
             {
-                MessageBox.Show("Invalid nickname or password.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Логін або пароль невірний", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         private void Register (object parameter)
         {
             if (string.IsNullOrEmpty(FirstName) || string.IsNullOrEmpty(SecondName) || string.IsNullOrEmpty(NickName) || string.IsNullOrEmpty(PhoneNumber) || string.IsNullOrEmpty(Password))
             {
-                MessageBox.Show("All fields are required!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Заповніть всі поля!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
             var existingCustomer = _repository.GetByNickName(NickName);
             if (existingCustomer != null)
             {
-                MessageBox.Show("Nickname is already taken.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Логін зайнятий", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
             var customer = new Customer(FirstName, SecondName, PhoneNumber, NickName, Password);
             _repository.SaveCustomer(customer);
 
-            MessageBox.Show("Registration successful!", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Регістрація успішна!", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
             CustomerService.IsUserLoggedIn = false;
             if (Application.Current.MainWindow is MainWindow mainWindow)
             {

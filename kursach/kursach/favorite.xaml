@@ -35,5 +35,31 @@
                 <ImageBrush ImageSource="/Без названия (3).png"/>
             </Button.Background>
         </Button>
+
+        <ScrollViewer Grid.Row="1" Grid.Column="1" VerticalScrollBarVisibility="Auto">
+            <ListBox ItemsSource="{Binding TicketViewModel.LikedTickets}" ScrollViewer.CanContentScroll="False">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border Background="White" Margin="0,0,0,10" Padding="10">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Width="150" Height="100" Source="{Binding HotelImage}" OpacityMask="Black" />
+                                <StackPanel Orientation="Vertical" Width="400" Margin="10,0,0,0">
+                                    <TextBlock Text="{Binding Description}" FontSize="16" FontWeight="Bold" TextWrapping="Wrap" />
+                                    <TextBlock Text="{Binding Departure, StringFormat='Відправка з {0}'}" Foreground="DarkOrange" />
+                                    <TextBlock Text="{Binding Period}" Foreground="Gray" Margin="0,5,0,0" />
+                                    <TextBlock Text="{Binding Date, StringFormat= 'Виліт: {0}'}" Foreground="Gray" Margin="0,5,0,0"/>
+                                    <TextBlock Text="{Binding TicketAvailability}" Foreground="Green" Margin="0,5,0,0" />
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" HorizontalAlignment="Right">
+                                    <TextBlock Text="{Binding Price}" FontSize="18" FontWeight="Bold" Foreground="Black" HorizontalAlignment="Right" />
+                                    <Button Content="Придбати" Background="Green" Foreground="White" Width="100" Height="30" Margin="10,10,0,0" Command="{Binding DataContext.TicketViewModel.BuyCommand, RelativeSource={RelativeSource AncestorType=ListBox}}"/>
+                                    <Button Content="Удалить" Background="Red" Foreground="White" Width="100" Height="30" Margin="10,10,0,0" Command="{Binding DataContext.TicketViewModel.RemoveFromLikedCommand, RelativeSource={RelativeSource AncestorType=ListBox}}" CommandParameter="{Binding}"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </ScrollViewer>
     </Grid>
 </Page>
