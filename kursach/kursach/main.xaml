@@ -79,7 +79,13 @@
                     </ComboBox.Resources>
                 </ComboBox>
 
-                <ComboBox Width="89" Height="20" Margin="10,0,0,0">
+                <ComboBox 
+                 Width="89" 
+                 Height="20" 
+                 Margin="10,0,0,0"
+                 ItemsSource="{Binding TicketViewModel.PossiblePeriod}"
+                 SelectedValue="{Binding TicketViewModel.PeriodFilter}" 
+                 VerticalAlignment="Center">
                     <ComboBox.Resources>
                         <Style TargetType="Border">
                             <Style.Triggers>

@@ -16,10 +16,12 @@ namespace kursach.ViewModel
     public class TicketViewModel : INotifyPropertyChanged
     {
         private DateTime? _startDateFilter; 
-        private string _destinationFilter; 
+        private string _destinationFilter;
+        private string _periodFilter;
         private string _departureFilter; private ObservableCollection<Ticket> _tickets;
         private ObservableCollection<Ticket> _filteredTickets;
         public ObservableCollection<string> PossibleDestinations { get; private set; }
+        public ObservableCollection<string> PossiblePeriod { get; private set; }
         public ObservableCollection<string> PossibleDepartures { get; private set; }
         public ObservableCollection<Ticket> Tickets
         {
@@ -54,6 +56,15 @@ namespace kursach.ViewModel
             set
             {
                 _destinationFilter = value;
+                OnPropertyChanged();
+            }
+        }
+        public string PeriodFilter
+        {
+            get => _periodFilter;
+            set
+            {
+                _periodFilter = value;
                 OnPropertyChanged();
             }
         }
@@ -200,6 +211,7 @@ namespace kursach.ViewModel
             };
             PossibleDestinations = new ObservableCollection<string>(Tickets.Select(t => t.Destination).Distinct());
             PossibleDepartures = new ObservableCollection<string>(Tickets.Select(t => t.Departure).Distinct());
+            PossiblePeriod = new ObservableCollection<string>(Tickets.Select(t => t.Period).Distinct());
             FiltertedTickets = new ObservableCollection<Ticket>(Tickets);
             ApplyFiltersCommand = new RelayCommand(ApplyFilters);
             BuyCommand = new RelayCommand(Buy);
@@ -211,6 +223,7 @@ namespace kursach.ViewModel
         {
             var filtered = Tickets.Where(v =>
                 (!StartDateFilter.HasValue || v.Date >= StartDateFilter.Value) &&
+                (string.IsNullOrEmpty(PeriodFilter) || v.Period.Equals(PeriodFilter, StringComparison.OrdinalIgnoreCase)) &&
                 (string.IsNullOrEmpty(DestinationFilter) || v.Destination.Equals(DestinationFilter, StringComparison.OrdinalIgnoreCase)) &&
                 (string.IsNullOrEmpty(DepartureFilter) || v.Departure.Equals(DepartureFilter, StringComparison.OrdinalIgnoreCase))).ToList();
 

@@ -133,4 +133,11 @@
     <Password>312312</Password>
     <PhoneNumber>312321</PhoneNumber>
   </Customer>
+  <Customer>
+    <FirstName>11</FirstName>
+    <SecondName>11</SecondName>
+    <NickName>12</NickName>
+    <Password>12</Password>
+    <PhoneNumber>12</PhoneNumber>
+  </Customer>
 </ArrayOfCustomer>
