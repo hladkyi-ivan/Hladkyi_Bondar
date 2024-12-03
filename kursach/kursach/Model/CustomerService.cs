@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -52,6 +52,15 @@ namespace kursach.Model
         {
             _customers.Add(customer);
             SaveChanges();
+        }
+        public void UpdateCustomerAvatar(string nickName, string avatarPath)
+        {
+            var customer = GetByNickName(nickName);
+            if (customer != null)
+            {
+                customer.AvatarPath = avatarPath;
+                SaveChanges();
+            }
         }
         private void SaveChanges()
         {

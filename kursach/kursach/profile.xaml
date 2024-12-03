@@ -44,7 +44,7 @@
         <StackPanel Grid.Column="1" Grid.Row="2" Margin="0,0,0,119" Grid.RowSpan="2">
             <Button Width="158" BorderBrush="Red" Height="160" Margin="0,0,0,25" Foreground="{x:Null}">
                 <Button.Background>
-                    <ImageBrush ImageSource="/Без_названия-removebg-preview.png" TileMode="None" Stretch="UniformToFill"/>
+                    <ImageBrush ImageSource="{Binding AvatarPath, TargetNullValue='/Без_названия-removebg-preview.png'}" TileMode="None" Stretch="UniformToFill"/>
                 </Button.Background>
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -57,7 +57,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button Content="Змінити фотографію" Width="120">
+            <Button Content="Змінити фотографію" Width="120" Command="{Binding ChangeAvatarCommand}">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Border CornerRadius="10" 
