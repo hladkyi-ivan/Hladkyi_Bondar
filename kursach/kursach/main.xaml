@@ -63,11 +63,10 @@
 
                 <ComboBox 
                     Width="89" 
-                    Height="19" 
+                    Height="20" 
                     Margin="10,0,0,0"
                     ItemsSource="{Binding TicketViewModel.PossibleDestinations}"
                     SelectedValue="{Binding TicketViewModel.DestinationFilter}" 
-                    HorizontalAlignment="Center" 
                     VerticalAlignment="Center">
                     <ComboBox.Resources>
                         <Style TargetType="Border">
@@ -80,7 +79,7 @@
                     </ComboBox.Resources>
                 </ComboBox>
 
-                <ComboBox Width="89" Height="17" Margin="10,0,0,0">
+                <ComboBox Width="89" Height="20" Margin="10,0,0,0">
                     <ComboBox.Resources>
                         <Style TargetType="Border">
                             <Style.Triggers>
@@ -95,7 +94,7 @@
                 <DatePicker SelectedDate="{Binding TicketViewModel.StartDateFilter}" Width="100" Height="28" Margin="10,0,0,0"/>
 
 
-                <Button Content="Apply Filters" Command="{Binding TicketViewModel.ApplyFiltersCommand}" Height="21" Width="132" Background="#FFCA6B29" BorderBrush="Black">
+                <Button Content="Шукати" Command="{Binding TicketViewModel.ApplyFiltersCommand}" Height="21" Width="132" Background="#FFCA6B29" BorderBrush="Black">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border CornerRadius="10" 
@@ -107,7 +106,7 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                <Button Content="Clear" Command="{Binding TicketViewModel.ResetFiltersCommand}" Height="21" Width="40" Background="#FFCA6B29" BorderBrush="Black">
+                <Button Content="Очистить" Command="{Binding TicketViewModel.ResetFiltersCommand}" Height="21" Width="65" Background="#FFCA6B29" BorderBrush="Black">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border CornerRadius="10" 
@@ -192,7 +191,7 @@
                                 <StackPanel Orientation="Vertical" HorizontalAlignment="Right">
                                     <TextBlock Text="{Binding Price}" FontSize="18" FontWeight="Bold" Foreground="Black" HorizontalAlignment="Right" />
                                     <Button Content="Придбати" Background="Green" Foreground="White" Width="100" Height="30" Margin="10,10,0,0" Command="{Binding DataContext.TicketViewModel.BuyCommand, RelativeSource={RelativeSource AncestorType=ListBox}}"/>
-                                    <Button Height="25" Width="40" BorderBrush="#FFF1DADA" Foreground="{x:Null}" Command="{Binding DataContext.TicketViewModel.LikeCommand, RelativeSource={RelativeSource AncestorType=ListBox}}" CommandParameter="{Binding}">
+                                    <Button Height="25" Width="40" Foreground="{x:Null}" Command="{Binding DataContext.TicketViewModel.LikeCommand, RelativeSource={RelativeSource AncestorType=ListBox}}" CommandParameter="{Binding}" BorderBrush="{x:Null}">
                                         <Button.Background>
                                             <ImageBrush ImageSource="/images-removebg-preview-removebg-preview.png"/>
                                         </Button.Background>
@@ -204,5 +203,9 @@
                 </ListBox.ItemTemplate>
             </ListBox>
         </Grid>
+        <Label Content="Від куди" HorizontalAlignment="Left" Margin="10,-5,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Куди" HorizontalAlignment="Left" Margin="108,-5,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White"/>
+        <Label Content="Кількість ночей" HorizontalAlignment="Left" Margin="204,-5,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Дата" HorizontalAlignment="Left" Margin="310,-5,0,0" VerticalAlignment="Top" Foreground="White"/>
     </Grid>
 </Page>
