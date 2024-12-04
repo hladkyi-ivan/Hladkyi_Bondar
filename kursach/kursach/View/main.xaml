@@ -145,7 +145,7 @@
                 </ControlTemplate>
             </Button.Template>
             <Button.Background>
-                <ImageBrush ImageSource="/Images/Без_названия-removebg-preview.png"/>
+                <ImageBrush ImageSource="pack://application:,,,/Images/Без_названия-removebg-preview.png"/>
             </Button.Background>
         </Button>
 

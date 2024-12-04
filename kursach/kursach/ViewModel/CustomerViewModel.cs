@@ -386,11 +386,11 @@ namespace kursach.ViewModel
         {
             if (CustomerService.CurrentCustomer == null)
             {
-                AvatarPath = "/Без_названия-removebg-preview.png";
+                AvatarPath = "pack://application:,,,/Images/Без_названия-removebg-preview.png";
             }
             else if (string.IsNullOrEmpty(CustomerService.CurrentCustomer.AvatarPath))
             {
-                AvatarPath = "/Без_названия-removebg-preview.png";
+                AvatarPath = "pack://application:,,,/Images/Без_названия-removebg-preview.png";
             }
             else
             {

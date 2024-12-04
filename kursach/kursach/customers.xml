@@ -6,7 +6,20 @@
     <NickName>ADMINLEGEND</NickName>
     <Password>ADMINLEGEND</Password>
     <PhoneNumber>+48516792842</PhoneNumber>
-    <AvatarPath>/Images/Без_названия-removebg-preview.png</AvatarPath>
-    <LikedTickets />
+    <AvatarPath>C:\Users\ivann\Desktop\Курсова\kursach\kursach\bin\Debug\Аватари\ADMINLEGEND\аватар.png</AvatarPath>
+    <LikedTickets>
+      <Ticket>
+        <Destination>Egypt</Destination>
+        <Date>2024-12-06T00:00:00</Date>
+        <HotelName>Grand Blue Saint Maria Aqua Park 3*</HotelName>
+        <HotelImage>/Images/egipt.jpg</HotelImage>
+        <Period>Період: 8 ночей</Period>
+        <TicketAvailability>Наявність квитків: ✔</TicketAvailability>
+        <Description>Grand Blue Saint Maria Aqua Park 3*
+Єгипет</Description>
+        <Price>28 236 UAH</Price>
+        <Departure>Warsaw</Departure>
+      </Ticket>
+    </LikedTickets>
   </Customer>
 </ArrayOfCustomer>
