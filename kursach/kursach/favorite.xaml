@@ -32,7 +32,7 @@
 
         <Button Content="Button" Command="{Binding CustomerViewModel.NavigateToMainCommand}" HorizontalAlignment="Center" Width="38" Foreground="{x:Null}" BorderBrush="{x:Null}">
             <Button.Background>
-                <ImageBrush ImageSource="/Без названия (3).png"/>
+                <ImageBrush ImageSource="/Images/Без названия (3).png"/>
             </Button.Background>
         </Button>
 
@@ -53,7 +53,7 @@
                                 <StackPanel Orientation="Vertical" HorizontalAlignment="Right">
                                     <TextBlock Text="{Binding Price}" FontSize="18" FontWeight="Bold" Foreground="Black" HorizontalAlignment="Right" />
                                     <Button Content="Придбати" Background="Green" Foreground="White" Width="100" Height="30" Margin="10,10,0,0" Command="{Binding DataContext.TicketViewModel.BuyCommand, RelativeSource={RelativeSource AncestorType=ListBox}}"/>
-                                    <Button Content="Удалить" Background="Red" Foreground="White" Width="100" Height="30" Margin="10,10,0,0" Command="{Binding DataContext.TicketViewModel.RemoveFromLikedCommand, RelativeSource={RelativeSource AncestorType=ListBox}}" CommandParameter="{Binding}"/>
+                                    <Button Content="Видалити" Background="Red" Foreground="White" Width="100" Height="30" Margin="10,10,0,0" Command="{Binding DataContext.TicketViewModel.RemoveFromLikedCommand, RelativeSource={RelativeSource AncestorType=ListBox}}" CommandParameter="{Binding}"/>
                                 </StackPanel>
                             </StackPanel>
                         </Border>

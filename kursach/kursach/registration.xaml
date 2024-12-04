@@ -44,7 +44,7 @@
 
         <Button Click="Back" HorizontalAlignment="Center" Width="38" Foreground="{x:Null}" BorderBrush="{x:Null}">
             <Button.Background>
-                <ImageBrush ImageSource="/Без названия (3).png"/>
+                <ImageBrush ImageSource="/Images/Без названия (3).png"/>
             </Button.Background>
         </Button>
         <Label Content="Registration" HorizontalAlignment="Center" Margin="0,31,0,0" Grid.Row="1" VerticalAlignment="Top" FontFamily="Bernard MT Condensed" FontSize="48" Grid.Column="1" Height="67" Width="234"/>
@@ -156,7 +156,7 @@ CornerRadius="10">
         <StackPanel Grid.Column="1" Grid.Row="1" Margin="60,223,60,139" Orientation="Horizontal">
             <Button Content="Button"  Click="Openurl_google" Width="40" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="47">
                 <Button.Background>
-                    <ImageBrush ImageSource="/google (1).jpg" TileMode="None" Stretch="UniformToFill"/>
+                    <ImageBrush ImageSource="/Images/google (1).jpg" TileMode="None" Stretch="UniformToFill"/>
                 </Button.Background>
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -171,7 +171,7 @@ CornerRadius="10">
             </Button>
             <Button Click="Openurl_facebook" Width="40" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="48" RenderTransformOrigin="0.325,0.67">
                 <Button.Background>
-                    <ImageBrush ImageSource="/facebook.png"/>
+                    <ImageBrush ImageSource="/Images/facebook.png"/>
                 </Button.Background>
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -186,7 +186,7 @@ CornerRadius="10">
             </Button>
             <Button Click="Openurl_instagram" Width="40" RenderTransformOrigin="-0.017,0.536" BorderBrush="{x:Null}" Height="47">
                 <Button.Background>
-                    <ImageBrush ImageSource="/instagram (1).png"/>
+                    <ImageBrush ImageSource="/Images/instagram (1).png"/>
                 </Button.Background>
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">

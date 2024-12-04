@@ -38,7 +38,7 @@
 
         <Button Content="Button" Margin="0,1,0,0" Command="{Binding NavigateToMainCommand}" HorizontalAlignment="Center" Width="38" Foreground="{x:Null}" BorderBrush="{x:Null}" RenderTransformOrigin="0.571,0.556">
             <Button.Background>
-                <ImageBrush ImageSource="/Без названия (3).png"/>
+                <ImageBrush ImageSource="/Images/Без названия (3).png"/>
             </Button.Background>
         </Button>
         <StackPanel Grid.Column="1" Grid.Row="2" Margin="0,0,0,119" Grid.RowSpan="2">
@@ -100,8 +100,8 @@
                 <TextBlock TextWrapping="Wrap" Text="{Binding SecondNameProfile}" Width="208" Height="25"/>
             </StackPanel>
         </StackPanel>
-        <Image Grid.Column="3" HorizontalAlignment="Left" Height="146" Margin="58,20,0,0" Grid.Row="1" VerticalAlignment="Top" Width="178" Source="/photo_2024-12-03_00-46-37.jpg" Grid.RowSpan="2"/>
-        <Image Grid.Column="3" HorizontalAlignment="Left" Height="150" Grid.Row="2" VerticalAlignment="Top" Width="156" Source="/photo_2024-12-03_00-47-48.jpg" Margin="56,148,0,0" Grid.RowSpan="2"/>
+        <Image Grid.Column="3" HorizontalAlignment="Left" Height="146" Margin="58,20,0,0" Grid.Row="1" VerticalAlignment="Top" Width="178" Source="/Images/photo_2024-12-03_00-46-37.jpg" Grid.RowSpan="2"/>
+        <Image Grid.Column="3" HorizontalAlignment="Left" Height="150" Grid.Row="2" VerticalAlignment="Top" Width="156" Source="/Images/photo_2024-12-03_00-47-48.jpg" Margin="56,148,0,0" Grid.RowSpan="2"/>
         <Label Grid.Column="3" Content="Реклама" HorizontalAlignment="Left" Margin="104,122,0,0" Grid.Row="3" VerticalAlignment="Top" Opacity="0.5"/>
         <Label Grid.Column="3" Content="Реклама" HorizontalAlignment="Left" Margin="104,117,0,0" Grid.Row="2" VerticalAlignment="Top" Opacity="0.5"/>
     </Grid>

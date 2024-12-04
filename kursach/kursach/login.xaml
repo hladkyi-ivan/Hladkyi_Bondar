@@ -45,10 +45,10 @@
 
         <Button Content="Button" Margin="0,1,0,0" Command="{Binding NavigateToMainCommand}" Grid.Column="1" HorizontalAlignment="Center" Width="40" Foreground="{x:Null}" BorderBrush="{x:Null}">
             <Button.Background>
-                <ImageBrush ImageSource="/Без названия (3).png"/>
+                <ImageBrush ImageSource="/Images/Без названия (3).png"/>
             </Button.Background>
         </Button>
-        <Image Grid.Column="3" Height="108" Grid.Row="1" VerticalAlignment="Center" Source="/istockphoto-469936880-170667a-removebg-preview.png" Margin="103,0,207,0" Grid.ColumnSpan="3"/>
+        <Image Grid.Column="3" Height="108" Grid.Row="1" VerticalAlignment="Center" Source="/Images/istockphoto-469936880-170667a-removebg-preview.png" Margin="103,0,207,0" Grid.ColumnSpan="3"/>
         <Button Grid.Column="4" Content="Вхід" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Center" Height="40" Width="100" BorderBrush="White" FontWeight="Bold"  Command="{Binding LoginCommand}">
             <Button.Background>
                 <LinearGradientBrush>

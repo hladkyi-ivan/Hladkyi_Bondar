@@ -145,7 +145,7 @@
                 </ControlTemplate>
             </Button.Template>
             <Button.Background>
-                <ImageBrush ImageSource="/Без_названия-removebg-preview.png"/>
+                <ImageBrush ImageSource="/Images/Без_названия-removebg-preview.png"/>
             </Button.Background>
         </Button>
 
@@ -161,14 +161,14 @@
                 <Style TargetType="Button">
                     <Setter Property="Background">
                         <Setter.Value>
-                            <ImageBrush ImageSource="/images-preview-removebg-preview.png"/>
+                            <ImageBrush ImageSource="/Images/images-preview-removebg-preview.png"/>
                         </Setter.Value>
                     </Setter>
                     <Style.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Background">
                                 <Setter.Value>
-                                    <ImageBrush ImageSource="/images-removebg-preview-removebg-preview.png"/>
+                                    <ImageBrush ImageSource="/Images/images-removebg-preview-removebg-preview.png"/>
                                 </Setter.Value>
                             </Setter>
                         </Trigger>
@@ -199,7 +199,7 @@
                                     <Button Content="Придбати" Background="Green" Foreground="White" Width="100" Height="30" Margin="10,10,0,0" Command="{Binding DataContext.TicketViewModel.BuyCommand, RelativeSource={RelativeSource AncestorType=ListBox}}"/>
                                     <Button Height="25" Width="40" Foreground="{x:Null}" Command="{Binding DataContext.TicketViewModel.LikeCommand, RelativeSource={RelativeSource AncestorType=ListBox}}" CommandParameter="{Binding}" BorderBrush="{x:Null}">
                                         <Button.Background>
-                                            <ImageBrush ImageSource="/images-removebg-preview-removebg-preview.png"/>
+                                            <ImageBrush ImageSource="/Images/images-removebg-preview-removebg-preview.png"/>
                                         </Button.Background>
                                     </Button>
                                 </StackPanel>

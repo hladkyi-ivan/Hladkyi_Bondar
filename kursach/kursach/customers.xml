@@ -7,7 +7,32 @@
     <Password>1</Password>
     <PhoneNumber>+123456789</PhoneNumber>
     <AvatarPath>C:\Users\ivann\Desktop\Курсова\kursach\kursach\bin\Debug\Аватари\1\аватар.png</AvatarPath>
-    <LikedTickets />
+    <LikedTickets>
+      <Ticket>
+        <Destination>Egypt</Destination>
+        <Date>2024-12-06T00:00:00</Date>
+        <HotelName>Grand Blue Saint Maria Aqua Park 3*</HotelName>
+        <HotelImage>/Images/egipt.jpg</HotelImage>
+        <Period>Період: 8 ночей</Period>
+        <TicketAvailability>Наявність квитків: ✔</TicketAvailability>
+        <Description>Grand Blue Saint Maria Aqua Park 3*
+Єгипет</Description>
+        <Price>28 236 UAH</Price>
+        <Departure>Warsaw</Departure>
+      </Ticket>
+      <Ticket>
+        <Destination>Paris</Destination>
+        <Date>2024-12-10T00:00:00</Date>
+        <HotelName>Le Grand Hotel Paris</HotelName>
+        <HotelImage>/Images/Le Grand Hotel Paris 4.jpg</HotelImage>
+        <Period>Період: 7 ночей</Period>
+        <TicketAvailability>Наявність квитків: ✔</TicketAvailability>
+        <Description>Le Grand Hotel Paris 4*
+Франція, Париж</Description>
+        <Price>32 450 UAH</Price>
+        <Departure>London</Departure>
+      </Ticket>
+    </LikedTickets>
   </Customer>
   <Customer>
     <FirstName>11</FirstName>
@@ -21,13 +46,25 @@
         <Destination>Egypt</Destination>
         <Date>2024-12-06T00:00:00</Date>
         <HotelName>Grand Blue Saint Maria Aqua Park 3*</HotelName>
-        <HotelImage>/egipt.jpg</HotelImage>
+        <HotelImage>/Images/egipt.jpg</HotelImage>
         <Period>Період: 8 ночей</Period>
         <TicketAvailability>Наявність квитків: ✔</TicketAvailability>
         <Description>Grand Blue Saint Maria Aqua Park 3*
 Єгипет</Description>
         <Price>28 236 UAH</Price>
         <Departure>Warsaw</Departure>
+      </Ticket>
+      <Ticket>
+        <Destination>Paris</Destination>
+        <Date>2024-12-10T00:00:00</Date>
+        <HotelName>Le Grand Hotel Paris</HotelName>
+        <HotelImage>/Images/Le Grand Hotel Paris 4.jpg</HotelImage>
+        <Period>Період: 7 ночей</Period>
+        <TicketAvailability>Наявність квитків: ✔</TicketAvailability>
+        <Description>Le Grand Hotel Paris 4*
+Франція, Париж</Description>
+        <Price>32 450 UAH</Price>
+        <Departure>London</Departure>
       </Ticket>
     </LikedTickets>
   </Customer>
@@ -52,12 +89,34 @@
         <Destination>Bali</Destination>
         <Date>2024-12-20T00:00:00</Date>
         <HotelName>Bali Paradise Resort 5*</HotelName>
-        <HotelImage>/Bali Paradise Resort 5.jpg</HotelImage>
+        <HotelImage>/Images/Bali Paradise Resort 5.jpg</HotelImage>
         <Period>Період: 7 ночей</Period>
         <TicketAvailability>Наявність квитків: ✔</TicketAvailability>
         <Description>Bali Paradise Resort 5*
 Індонезія, Балі</Description>
         <Price>45 000 UAH</Price>
+        <Departure>Warsaw</Departure>
+      </Ticket>
+    </LikedTickets>
+  </Customer>
+  <Customer>
+    <FirstName>вывфывыф</FirstName>
+    <SecondName>ыфвфывыфв</SecondName>
+    <NickName>dsdsdsds</NickName>
+    <Password>dsdsdsds</Password>
+    <PhoneNumber>+2141241231</PhoneNumber>
+    <AvatarPath>/Images/Без_названия-removebg-preview.png</AvatarPath>
+    <LikedTickets>
+      <Ticket>
+        <Destination>Egypt</Destination>
+        <Date>2024-12-06T00:00:00</Date>
+        <HotelName>Grand Blue Saint Maria Aqua Park 3*</HotelName>
+        <HotelImage>/Images/egipt.jpg</HotelImage>
+        <Period>Період: 8 ночей</Period>
+        <TicketAvailability>Наявність квитків: ✔</TicketAvailability>
+        <Description>Grand Blue Saint Maria Aqua Park 3*
+Єгипет</Description>
+        <Price>28 236 UAH</Price>
         <Departure>Warsaw</Departure>
       </Ticket>
     </LikedTickets>

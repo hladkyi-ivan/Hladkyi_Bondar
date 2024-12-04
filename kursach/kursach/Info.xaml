@@ -32,7 +32,7 @@
 
         <Button Content="Button" Command="{Binding CustomerViewModel.NavigateToMainCommand}" HorizontalAlignment="Center" Width="38" Foreground="{x:Null}" BorderBrush="{x:Null}">
             <Button.Background>
-                <ImageBrush ImageSource="/Без названия (3).png"/>
+                <ImageBrush ImageSource="/Images/Без названия (3).png"/>
             </Button.Background>
         </Button>
     </Grid>
