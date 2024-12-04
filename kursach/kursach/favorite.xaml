@@ -37,7 +37,7 @@
         </Button>
 
         <ScrollViewer Grid.Row="1" Grid.Column="1" VerticalScrollBarVisibility="Auto">
-            <ListBox ItemsSource="{Binding TicketViewModel.LikedTickets}" ScrollViewer.CanContentScroll="False">
+            <ListBox ItemsSource="{Binding TicketViewModel.LikedTickets}" ScrollViewer.CanContentScroll="False" Height="400" Width="692" Margin="-60,0,0,0">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Border Background="White" Margin="0,0,0,10" Padding="10">

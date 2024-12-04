@@ -26,8 +26,8 @@
     </Page.Resources>
     <Grid Background="#FFFFE4E6">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="705"/>
-            <ColumnDefinition Width="44"/>
+            <ColumnDefinition Width="702"/>
+            <ColumnDefinition Width="47"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -149,7 +149,7 @@
             </Button.Background>
         </Button>
 
-        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="30" Height="20" BorderBrush="Transparent" Grid.Column="1" Command ="{Binding CustomerViewModel.NavigateToFavoriteCommand}">
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="34" Height="20" BorderBrush="Transparent" Grid.Column="1" Command ="{Binding CustomerViewModel.NavigateToFavoriteCommand}">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border x:Name="border" Background="{TemplateBinding Background}">
@@ -209,9 +209,9 @@
                 </ListBox.ItemTemplate>
             </ListBox>
         </Grid>
-        <Label Content="Від куди" HorizontalAlignment="Left" Margin="10,-5,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label Content="Куди" HorizontalAlignment="Left" Margin="108,-5,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White"/>
-        <Label Content="Кількість ночей" HorizontalAlignment="Left" Margin="204,-5,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label Content="Дата" HorizontalAlignment="Left" Margin="310,-5,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Від куди" HorizontalAlignment="Left" Margin="10,-5,0,0" VerticalAlignment="Top" Foreground="White" Height="26" Width="55"/>
+        <Label Content="Куди" HorizontalAlignment="Left" Margin="108,-5,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" Height="26" Width="36"/>
+        <Label Content="Кількість ночей" HorizontalAlignment="Left" Margin="204,-5,0,0" VerticalAlignment="Top" Foreground="White" Height="26" Width="95"/>
+        <Label Content="Дата" HorizontalAlignment="Left" Margin="310,-5,0,0" VerticalAlignment="Top" Foreground="White" Height="26" Width="35"/>
     </Grid>
 </Page>

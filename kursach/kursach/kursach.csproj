@@ -188,9 +188,6 @@
     <Resource Include="istockphoto-469936880-170667a-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="google.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="google %281%29.jpg" />
   </ItemGroup>
   <ItemGroup>
