@@ -3,11 +3,14 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:vm="clr-namespace:kursach.ViewModel"
       xmlns:local="clr-namespace:kursach"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="history_buying">
-
+    <Page.DataContext>
+        <vm:MainViewModel />
+    </Page.DataContext>
     <Grid Background="#FFFFE4E6">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
@@ -27,7 +30,7 @@
             </Border.Background>
         </Border>
 
-        <Button Content="Button" Command="{Binding NavigateToMainCommand}" HorizontalAlignment="Center" Width="38" Foreground="{x:Null}" BorderBrush="{x:Null}">
+        <Button Content="Button" Command="{Binding CustomerViewModel.NavigateToMainCommand}" HorizontalAlignment="Center" Width="38" Foreground="{x:Null}" BorderBrush="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="/Без названия (3).png"/>
             </Button.Background>

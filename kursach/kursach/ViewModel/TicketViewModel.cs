@@ -245,6 +245,7 @@ namespace kursach.ViewModel
             StartDateFilter = null;
             DestinationFilter = null;
             DepartureFilter = null;
+            PeriodFilter = null;
             FiltertedTickets = new ObservableCollection<Ticket>(Tickets);
         }
         private void Buy(object parameter)

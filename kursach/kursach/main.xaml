@@ -112,7 +112,7 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                <Button Content="Очистить" Command="{Binding TicketViewModel.ResetFiltersCommand}" Height="21" Width="65" Background="#FFCA6B29" BorderBrush="Black">
+                <Button Content="Очистити" Command="{Binding TicketViewModel.ResetFiltersCommand}" Height="21" Width="65" Background="#FFCA6B29" BorderBrush="Black">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border CornerRadius="10" 

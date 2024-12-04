@@ -91,6 +91,7 @@
     <Compile Include="main.xaml.cs">
       <DependentUpon>main.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Payment.cs" />
     <Compile Include="Model\Ticket.cs" />
     <Compile Include="profile.xaml.cs">
       <DependentUpon>profile.xaml</DependentUpon>
@@ -100,6 +101,7 @@
     </Compile>
     <Compile Include="ViewModel\CustomerViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\PaymentViewModel.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="ViewModel\TicketViewModel.cs" />
     <Page Include="buying.xaml">

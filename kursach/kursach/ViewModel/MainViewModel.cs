@@ -15,10 +15,13 @@ namespace kursach.ViewModel
     {
         public CustomerViewModel CustomerViewModel { get; set; }
         public TicketViewModel TicketViewModel { get; set; }
+        public PaymentViewModel PaymentViewModel { get; set; }
+
         public MainViewModel()
         {
             CustomerViewModel = new CustomerViewModel();
             TicketViewModel = new TicketViewModel();
+            PaymentViewModel = new PaymentViewModel();
         }
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
