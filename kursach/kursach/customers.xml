@@ -6,7 +6,8 @@
     <NickName>1</NickName>
     <Password>1</Password>
     <PhoneNumber>+123456789</PhoneNumber>
-    <AvatarPath>C:\Users\nikita\Desktop\kursach\kursach\kursach\bin\Debug\Аватари\1\аватар.jpg</AvatarPath>
+    <AvatarPath>C:\Users\ivann\Desktop\Курсова\kursach\kursach\bin\Debug\Аватари\1\аватар.png</AvatarPath>
+    <LikedTickets />
   </Customer>
   <Customer>
     <FirstName>11</FirstName>
@@ -14,6 +15,51 @@
     <NickName>11</NickName>
     <Password>11</Password>
     <PhoneNumber>11</PhoneNumber>
-    <AvatarPath>C:\Users\ivann\Desktop\Курсова\kursach\kursach\bin\Debug\Аватари\11\аватар.png</AvatarPath>
+    <AvatarPath>C:\Users\ivann\Desktop\Курсова\kursach\kursach\bin\Debug\Аватари\11\аватар.jpg</AvatarPath>
+    <LikedTickets>
+      <Ticket>
+        <Destination>Egypt</Destination>
+        <Date>2024-12-06T00:00:00</Date>
+        <HotelName>Grand Blue Saint Maria Aqua Park 3*</HotelName>
+        <HotelImage>/egipt.jpg</HotelImage>
+        <Period>Період: 8 ночей</Period>
+        <TicketAvailability>Наявність квитків: ✔</TicketAvailability>
+        <Description>Grand Blue Saint Maria Aqua Park 3*
+Єгипет</Description>
+        <Price>28 236 UAH</Price>
+        <Departure>Warsaw</Departure>
+      </Ticket>
+    </LikedTickets>
+  </Customer>
+  <Customer>
+    <FirstName>ВІВІВІ</FirstName>
+    <SecondName>ВІВІВІ</SecondName>
+    <NickName>TEST999</NickName>
+    <Password>TEST999</Password>
+    <PhoneNumber>+3124235124</PhoneNumber>
+    <AvatarPath>/Без_названия-removebg-preview.png</AvatarPath>
+    <LikedTickets />
+  </Customer>
+  <Customer>
+    <FirstName>Ivan</FirstName>
+    <SecondName>Hladkyi</SecondName>
+    <NickName>HladkyiADMIN</NickName>
+    <Password>HladkyiADMIN</Password>
+    <PhoneNumber>+48516792842</PhoneNumber>
+    <AvatarPath>C:\Users\ivann\Desktop\Курсова\kursach\kursach\bin\Debug\Аватари\HladkyiADMIN\аватар.jpg</AvatarPath>
+    <LikedTickets>
+      <Ticket>
+        <Destination>Bali</Destination>
+        <Date>2024-12-20T00:00:00</Date>
+        <HotelName>Bali Paradise Resort 5*</HotelName>
+        <HotelImage>/Bali Paradise Resort 5.jpg</HotelImage>
+        <Period>Період: 7 ночей</Period>
+        <TicketAvailability>Наявність квитків: ✔</TicketAvailability>
+        <Description>Bali Paradise Resort 5*
+Індонезія, Балі</Description>
+        <Price>45 000 UAH</Price>
+        <Departure>Warsaw</Departure>
+      </Ticket>
+    </LikedTickets>
   </Customer>
 </ArrayOfCustomer>

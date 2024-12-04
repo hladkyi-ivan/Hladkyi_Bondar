@@ -15,11 +15,13 @@ namespace kursach.ViewModel
 {
     public class TicketViewModel : INotifyPropertyChanged
     {
-        private DateTime? _startDateFilter; 
+        private DateTime? _startDateFilter;
         private string _destinationFilter;
         private string _periodFilter;
         private string _departureFilter; private ObservableCollection<Ticket> _tickets;
         private ObservableCollection<Ticket> _filteredTickets;
+        private static ObservableCollection<Ticket> _likedTickets;
+        private static Customer _lastCustomer;
         public ObservableCollection<string> PossibleDestinations { get; private set; }
         public ObservableCollection<string> PossiblePeriod { get; private set; }
         public ObservableCollection<string> PossibleDepartures { get; private set; }
@@ -77,23 +79,28 @@ namespace kursach.ViewModel
                 OnPropertyChanged();
             }
         }
+        public ObservableCollection<Ticket> LikedTickets
+        {
+            get
+            {
+                if (_lastCustomer != CustomerService.CurrentCustomer)
+                {
+                    _likedTickets = CustomerService.IsUserLoggedIn && CustomerService.CurrentCustomer != null ? new ObservableCollection<Ticket>(CustomerService.CurrentCustomer.LikedTickets) : new ObservableCollection<Ticket>();     
+                    _lastCustomer = CustomerService.CurrentCustomer;
+                }
+                return _likedTickets;
+            }
+            set
+            {
+                _likedTickets = value;
+                OnPropertyChanged();
+            }
+        }
         public ICommand ApplyFiltersCommand { get; }
         public ICommand BuyCommand { get; }
         public ICommand ResetFiltersCommand { get; }
         public ICommand LikeCommand { get; private set; }
         public ICommand RemoveFromLikedCommand { get; private set; }
-        private static ObservableCollection<Ticket> _likedTickets;
-        public ObservableCollection<Ticket> LikedTickets 
-        { 
-            get 
-            {
-                if (_likedTickets == null)
-                {
-                    _likedTickets = new ObservableCollection<Ticket>();
-                }
-                return _likedTickets;
-            }
-        }
         public TicketViewModel()
         {
             Tickets = new ObservableCollection<Ticket>
@@ -209,10 +216,10 @@ namespace kursach.ViewModel
                     HotelName = "Split Sunset Hotel"
                 }
             };
+            FiltertedTickets = new ObservableCollection<Ticket>(Tickets);
             PossibleDestinations = new ObservableCollection<string>(Tickets.Select(t => t.Destination).Distinct());
             PossibleDepartures = new ObservableCollection<string>(Tickets.Select(t => t.Departure).Distinct());
             PossiblePeriod = new ObservableCollection<string>(Tickets.Select(t => t.Period).Distinct());
-            FiltertedTickets = new ObservableCollection<Ticket>(Tickets);
             ApplyFiltersCommand = new RelayCommand(ApplyFilters);
             BuyCommand = new RelayCommand(Buy);
             LikeCommand = new RelayCommand(LikeTicket);
@@ -233,7 +240,6 @@ namespace kursach.ViewModel
                 FiltertedTickets.Add(ticket);
             }
         }
-
         public void ResetFilters()
         {
             StartDateFilter = null;
@@ -260,12 +266,13 @@ namespace kursach.ViewModel
         }
         private void LikeTicket(object parameter)
         {
-            if (CustomerService.IsUserLoggedIn == true)
+            if (CustomerService.IsUserLoggedIn)
             {
-                if (parameter is Ticket ticket)
+                if (parameter is Ticket ticket && CustomerService.CurrentCustomer != null)
                 {
                     if (!LikedTickets.Any(t => t.HotelName == ticket.HotelName && t.Date == ticket.Date))
                     {
+                        CustomerService.Instance.UpdateCurrentCustomerLikedTickets(ticket, true);
                         LikedTickets.Add(ticket);
                         MessageBox.Show("Квиток додано до обраного!", "Добре", MessageBoxButton.OK, MessageBoxImage.Information);
                     }
@@ -285,15 +292,12 @@ namespace kursach.ViewModel
         }
         private void RemoveFromLiked(object parameter)
         {
-            if (parameter is Ticket ticket)
+            if (CustomerService.IsUserLoggedIn && CustomerService.CurrentCustomer != null)
             {
-                var ticketToRemove = LikedTickets.FirstOrDefault(t => 
-                    t.HotelName == ticket.HotelName && 
-                    t.Date == ticket.Date);
-                
-                if (ticketToRemove != null)
+                if (parameter is Ticket ticket)
                 {
-                    LikedTickets.Remove(ticketToRemove);
+                    CustomerService.Instance.UpdateCurrentCustomerLikedTickets(ticket, false);
+                    LikedTickets.Remove(ticket);
                     MessageBox.Show("Квиток видалено", "Добре", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
