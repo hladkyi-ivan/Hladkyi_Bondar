@@ -10,6 +10,7 @@ using System.Windows.Input;
 using System.Windows;
 using kursach.Model;
 using kursach;
+using kursach.View;
 
 namespace kursach.ViewModel
 {
@@ -254,14 +255,14 @@ namespace kursach.ViewModel
             {
                 if (Application.Current.MainWindow is MainWindow mainWindow)
                 {
-                    mainWindow.MyFrame.Navigate(new Uri("buying.xaml", UriKind.Relative));
+                    mainWindow.MyFrame.Navigate(new Uri("/View/buying.xaml", UriKind.Relative));
                 }
             }
             else
             {
                 if (Application.Current.MainWindow is MainWindow mainWindow)
                 {
-                    mainWindow.MyFrame.Navigate(new Uri("login.xaml", UriKind.Relative));
+                    mainWindow.MyFrame.Navigate(new Uri("/View/login.xaml", UriKind.Relative));
                 }
             }
         }
@@ -287,7 +288,7 @@ namespace kursach.ViewModel
             {
                 if (Application.Current.MainWindow is MainWindow mainWindow)
                 {
-                    mainWindow.MyFrame.Navigate(new Uri("login.xaml", UriKind.Relative));
+                    mainWindow.MyFrame.Navigate(new Uri("/View/login.xaml", UriKind.Relative));
                 }
             }
         }

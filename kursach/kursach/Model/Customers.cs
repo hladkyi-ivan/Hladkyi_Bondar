@@ -21,11 +21,11 @@ namespace kursach.Model
         public List<Ticket> LikedTickets { get; set; }
         public Customer() 
         {
-            AvatarPath = "/Images/Без_названия-removebg-preview.png";
+            AvatarPath = "Images/Без_названия-removebg-preview.png";
             LikedTickets = new List<Ticket>();
         }
         public Customer(string firstName, string lastName, string phoneNumber, string nickName, string password)
-        { FirstName = firstName; SecondName = lastName; PhoneNumber = phoneNumber; NickName = nickName; Password = password; AvatarPath = "/Images/Без_названия-removebg-preview.png"; LikedTickets = new List<Ticket>(); }
+        { FirstName = firstName; SecondName = lastName; PhoneNumber = phoneNumber; NickName = nickName; Password = password; AvatarPath = "Images/Без_названия-removebg-preview.png"; LikedTickets = new List<Ticket>(); }
         public void AddLikedTicket(Ticket ticket)
         {
             if (!LikedTickets.Any(t => t.HotelName == ticket.HotelName && t.Date == ticket.Date))

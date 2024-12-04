@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,11 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace kursach
+namespace kursach.View
 {
-    public partial class main : Page
+    /// <summary>
+    /// Логика взаимодействия для favorite.xaml
+    /// </summary>
+    public partial class favorite : Page
     {
-        public main()
+        public favorite()
         {
             InitializeComponent();
         }

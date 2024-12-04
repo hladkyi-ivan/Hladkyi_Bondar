@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-
+using kursach.View;
 namespace kursach.ViewModel
 {
     public class MainViewModel : INotifyPropertyChanged

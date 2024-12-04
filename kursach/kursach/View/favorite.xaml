@@ -1,0 +1,63 @@
+﻿<Page x:Class="kursach.View.favorite"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:kursach"
+      xmlns:vm="clr-namespace:kursach.ViewModel"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="favorite">
+    <Page.DataContext>
+        <vm:MainViewModel />
+    </Page.DataContext>
+    <Grid Background="#FFFFE4E6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Border BorderThickness="1" BorderBrush="Red" Grid.ColumnSpan="2">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF6F1010" Offset="0.438"/>
+                    <GradientStop Color="#FFDA4C4C" Offset="1"/>
+                    <GradientStop Color="#FF761414" Offset="0.281"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <Button Content="Button" Command="{Binding CustomerViewModel.NavigateToMainCommand}" HorizontalAlignment="Center" Width="38" Foreground="{x:Null}" BorderBrush="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="/Images/Без названия (3).png"/>
+            </Button.Background>
+        </Button>
+
+        <ListBox Grid.Row="1" ItemsSource="{Binding TicketViewModel.LikedTickets}" ScrollViewer.CanContentScroll="False" Height="378" Margin="10,22,10,0" VerticalAlignment="Top" Grid.ColumnSpan="2">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border Background="White" Margin="0,0,0,10" Padding="10">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Width="150" Height="100" Source="{Binding HotelImage}" OpacityMask="Black" />
+                            <StackPanel Orientation="Vertical" Width="400" Margin="10,0,0,0">
+                                <TextBlock Text="{Binding Description}" FontSize="16" FontWeight="Bold" TextWrapping="Wrap" />
+                                <TextBlock Text="{Binding Departure, StringFormat='Відправка з {0}'}" Foreground="DarkOrange" />
+                                <TextBlock Text="{Binding Period}" Foreground="Gray" Margin="0,5,0,0" />
+                                <TextBlock Text="{Binding Date, StringFormat= 'Виліт: {0}'}" Foreground="Gray" Margin="0,5,0,0"/>
+                                <TextBlock Text="{Binding TicketAvailability}" Foreground="Green" Margin="0,5,0,0" />
+                            </StackPanel>
+                            <StackPanel Orientation="Vertical" HorizontalAlignment="Right">
+                                <TextBlock Text="{Binding Price}" FontSize="18" FontWeight="Bold" Foreground="Black" HorizontalAlignment="Right" />
+                                <Button Content="Придбати" Background="Green" Foreground="White" Width="100" Height="30" Margin="10,10,0,0" Command="{Binding DataContext.TicketViewModel.BuyCommand, RelativeSource={RelativeSource AncestorType=ListBox}}"/>
+                                <Button Content="Видалити" Background="Red" Foreground="White" Width="100" Height="30" Margin="10,10,0,0" Command="{Binding DataContext.TicketViewModel.RemoveFromLikedCommand, RelativeSource={RelativeSource AncestorType=ListBox}}" CommandParameter="{Binding}"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Page>

@@ -13,14 +13,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace kursach
+namespace kursach.View
 {
-    /// <summary>
-    /// Логика взаимодействия для favorite.xaml
-    /// </summary>
-    public partial class favorite : Page
+    
+    public partial class MainWindow : Window
     {
-        public favorite()
+        public MainWindow()
         {
             InitializeComponent();
         }

@@ -15,7 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace kursach
+namespace kursach.View
 {
     public partial class registration : Page
     {

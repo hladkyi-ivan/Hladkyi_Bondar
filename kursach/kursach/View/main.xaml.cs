@@ -13,14 +13,11 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace kursach
+namespace kursach.View
 {
-    /// <summary>
-    /// Логика взаимодействия для profile.xaml
-    /// </summary>
-    public partial class profile : Page
+    public partial class main : Page
     {
-        public profile()
+        public main()
         {
             InitializeComponent();
         }

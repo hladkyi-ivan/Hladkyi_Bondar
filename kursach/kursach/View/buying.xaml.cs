@@ -12,13 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using kursach.ViewModel;
 
-namespace kursach
+namespace kursach.View
 {
-    
-    public partial class MainWindow : Window
+    /// <summary>
+    /// Логика взаимодействия для buying.xaml
+    /// </summary>
+    public partial class buying : Page
     {
-        public MainWindow()
+        public buying()
         {
             InitializeComponent();
         }

@@ -10,6 +10,7 @@ using System.Windows;
 using kursach.Model;
 using System.Windows.Navigation;
 using Microsoft.Win32;
+using kursach.View;
 
 namespace kursach.ViewModel
 {
@@ -158,7 +159,7 @@ namespace kursach.ViewModel
         {
             if (Application.Current.MainWindow is MainWindow mainWindow)
             {
-                mainWindow.MyFrame.Navigate(new Uri("Info.xaml", UriKind.Relative));
+                mainWindow.MyFrame.Navigate(new Uri("/View/Info.xaml", UriKind.Relative));
             }
         }
         private void NavigateToFavorite(object parametr)
@@ -167,14 +168,14 @@ namespace kursach.ViewModel
             {
                 if (Application.Current.MainWindow is MainWindow mainWindow)
                 {
-                    mainWindow.MyFrame.Navigate(new Uri("favorite.xaml", UriKind.Relative));
+                    mainWindow.MyFrame.Navigate(new Uri("/View/favorite.xaml", UriKind.Relative));
                 }
             }
             else
             {
                 if (Application.Current.MainWindow is MainWindow mainWindow)
                 {
-                    mainWindow.MyFrame.Navigate(new Uri("login.xaml", UriKind.Relative));
+                    mainWindow.MyFrame.Navigate(new Uri("/View/login.xaml", UriKind.Relative));
                 }
             }
         }
@@ -183,7 +184,7 @@ namespace kursach.ViewModel
             CustomerService.IsUserLoggedIn = false;
             if (Application.Current.MainWindow is MainWindow mainWindow)
             {
-                mainWindow.MyFrame.Navigate(new Uri("login.xaml", UriKind.Relative));
+                mainWindow.MyFrame.Navigate(new Uri("/View/login.xaml", UriKind.Relative));
             }
         }
         private void NavigateToLoginOrProfile(object parameter)
@@ -192,14 +193,14 @@ namespace kursach.ViewModel
             {
                 if (Application.Current.MainWindow is MainWindow mainWindow)
                 {
-                    mainWindow.MyFrame.Navigate(new Uri("profile.xaml", UriKind.Relative));
+                    mainWindow.MyFrame.Navigate(new Uri("/View/profile.xaml", UriKind.Relative));
                 }
             }
             else
             {
                 if (Application.Current.MainWindow is MainWindow mainWindow)
                 {
-                    mainWindow.MyFrame.Navigate(new Uri("login.xaml", UriKind.Relative));
+                    mainWindow.MyFrame.Navigate(new Uri("/View/login.xaml", UriKind.Relative));
                 }
             }
         }
@@ -207,14 +208,14 @@ namespace kursach.ViewModel
         {
             if (Application.Current.MainWindow is MainWindow mainWindow)
             {
-                mainWindow.MyFrame.Navigate(new Uri("registration.xaml", UriKind.Relative));
+                mainWindow.MyFrame.Navigate(new Uri("/View/registration.xaml", UriKind.Relative));
             }
         }
         public void NavigateToMain(object parameter)
         {
             if (Application.Current.MainWindow is MainWindow mainWindow)
             {
-                mainWindow.MyFrame.Navigate(new Uri("main.xaml", UriKind.Relative));
+                mainWindow.MyFrame.Navigate(new Uri("/View/main.xaml", UriKind.Relative));
             }
         }
         private void Login(object parameter)
@@ -225,7 +226,7 @@ namespace kursach.ViewModel
                 MessageBox.Show("Вітаємо!", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
                 if (Application.Current.MainWindow is MainWindow mainWindow)
                 {
-                    mainWindow.MyFrame.Navigate(new Uri("profile.xaml", UriKind.Relative));
+                    mainWindow.MyFrame.Navigate(new Uri("/View/profile.xaml", UriKind.Relative));
                 }
             }
             else
@@ -252,7 +253,7 @@ namespace kursach.ViewModel
             CustomerService.IsUserLoggedIn = false;
             if (Application.Current.MainWindow is MainWindow mainWindow)
             {
-                mainWindow.MyFrame.Navigate(new Uri("login.xaml", UriKind.Relative));
+                mainWindow.MyFrame.Navigate(new Uri("/View/login.xaml", UriKind.Relative));
             }
         }
         private bool ValidateFirstName(string firstName)

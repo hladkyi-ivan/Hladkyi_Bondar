@@ -76,27 +76,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="buying.xaml.cs">
+    <Compile Include="View\buying.xaml.cs">
       <DependentUpon>buying.xaml</DependentUpon>
     </Compile>
-    <Compile Include="favorite.xaml.cs">
+    <Compile Include="View\favorite.xaml.cs">
       <DependentUpon>favorite.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Info.xaml.cs">
+    <Compile Include="View\Info.xaml.cs">
       <DependentUpon>Info.xaml</DependentUpon>
     </Compile>
-    <Compile Include="login.xaml.cs">
+    <Compile Include="View\login.xaml.cs">
       <DependentUpon>login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="main.xaml.cs">
+    <Compile Include="View\main.xaml.cs">
       <DependentUpon>main.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\Payment.cs" />
     <Compile Include="Model\Ticket.cs" />
-    <Compile Include="profile.xaml.cs">
+    <Compile Include="View\profile.xaml.cs">
       <DependentUpon>profile.xaml</DependentUpon>
     </Compile>
-    <Compile Include="registration.xaml.cs">
+    <Compile Include="View\registration.xaml.cs">
       <DependentUpon>registration.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\CustomerViewModel.cs" />
@@ -104,27 +104,27 @@
     <Compile Include="ViewModel\PaymentViewModel.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="ViewModel\TicketViewModel.cs" />
-    <Page Include="buying.xaml">
+    <Page Include="View\buying.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="favorite.xaml">
+    <Page Include="View\favorite.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Info.xaml">
+    <Page Include="View\Info.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="login.xaml">
+    <Page Include="View\login.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="main.xaml">
+    <Page Include="View\main.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -132,15 +132,15 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="profile.xaml">
+    <Page Include="View\profile.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="registration.xaml">
+    <Page Include="View\registration.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
