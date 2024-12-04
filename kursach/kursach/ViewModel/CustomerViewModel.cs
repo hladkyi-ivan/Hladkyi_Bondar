@@ -140,7 +140,7 @@ namespace kursach.ViewModel
         public ICommand LogOutCommand {  get; }
         public ICommand NavigateToFavoriteCommand { get; }
         public ICommand ChangeAvatarCommand { get; }
-        public ICommand NavigateToHistoryCommand {  get; }
+        public ICommand NavigateToInfoCommand { get; }
         public CustomerViewModel()
         {
             LoginCommand = new RelayCommand(Login);
@@ -151,14 +151,14 @@ namespace kursach.ViewModel
             LogOutCommand = new RelayCommand(LogOutAndLogin);
             NavigateToFavoriteCommand = new RelayCommand(NavigateToFavorite);
             ChangeAvatarCommand = new RelayCommand(ChangeAvatar);
-            NavigateToHistoryCommand = new RelayCommand(NavigateToHistory);
+            NavigateToInfoCommand = new RelayCommand(NavigateToInfo); 
             LoadUserAvatar();
         }
-        public void NavigateToHistory(object parametr)
+        public void NavigateToInfo(object parametr)
         {
             if (Application.Current.MainWindow is MainWindow mainWindow)
             {
-                mainWindow.MyFrame.Navigate(new Uri("history_buying.xaml", UriKind.Relative));
+                mainWindow.MyFrame.Navigate(new Uri("Info.xaml", UriKind.Relative));
             }
         }
         private void NavigateToFavorite(object parametr)

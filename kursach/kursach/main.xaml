@@ -126,7 +126,7 @@
                 </Button>
             </StackPanel>
         </Border>
-
+        <Button x:Name="Q" Width="25" Margin="667,0,10,0"  Command="{Binding CustomerViewModel.NavigateToInfoCommand}"/>
         <Button Grid.Column="2" 
                 HorizontalAlignment="Center" 
                 Command="{Binding CustomerViewModel.NavigateToLoginOrProfileCommand}"  

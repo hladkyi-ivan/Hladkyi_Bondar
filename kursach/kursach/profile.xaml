@@ -69,7 +69,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button Content="Мої квитки" Height="20" Width="65" BorderBrush="Black" Background="#FF00FF9C" Margin="0,25,0,0" Command="{Binding NavigateToHistoryCommand}">
+            <Button Content="Вийти" Command="{Binding LogOutCommand}" Background="#FFFF8000" Margin="0,20,0,0" BorderBrush="Black" Height="20" Width="65">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Border CornerRadius="10" 
@@ -99,18 +99,6 @@
                 <TextBlock TextWrapping="Wrap" Text="Прізвище:" Width="59"/>
                 <TextBlock TextWrapping="Wrap" Text="{Binding SecondNameProfile}" Width="208" Height="25"/>
             </StackPanel>
-            <Button Content="Вийти" Height="20" Width="65" Command="{Binding LogOutCommand}" Background="#FFFF8000" BorderBrush="Black" Margin="0,50,0,0">
-                <Button.Template>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Border CornerRadius="10" 
-                    Background="{TemplateBinding Background}"
-                    BorderBrush="{TemplateBinding BorderBrush}"
-                    BorderThickness="{TemplateBinding BorderThickness}">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
         </StackPanel>
         <Image Grid.Column="3" HorizontalAlignment="Left" Height="146" Margin="58,20,0,0" Grid.Row="1" VerticalAlignment="Top" Width="178" Source="/photo_2024-12-03_00-46-37.jpg" Grid.RowSpan="2"/>
         <Image Grid.Column="3" HorizontalAlignment="Left" Height="150" Grid.Row="2" VerticalAlignment="Top" Width="156" Source="/photo_2024-12-03_00-47-48.jpg" Margin="56,148,0,0" Grid.RowSpan="2"/>

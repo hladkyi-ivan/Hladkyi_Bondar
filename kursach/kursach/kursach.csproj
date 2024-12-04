@@ -82,8 +82,8 @@
     <Compile Include="favorite.xaml.cs">
       <DependentUpon>favorite.xaml</DependentUpon>
     </Compile>
-    <Compile Include="history_buying.xaml.cs">
-      <DependentUpon>history_buying.xaml</DependentUpon>
+    <Compile Include="Info.xaml.cs">
+      <DependentUpon>Info.xaml</DependentUpon>
     </Compile>
     <Compile Include="login.xaml.cs">
       <DependentUpon>login.xaml</DependentUpon>
@@ -112,7 +112,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="history_buying.xaml">
+    <Page Include="Info.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -175,28 +175,28 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images-preview.png" />
+    <Resource Include="Images\images-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Без_названия-removebg-preview.png" />
+    <Resource Include="Images\Без_названия-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images-preview-removebg-preview.png" />
+    <Resource Include="Images\images-preview-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Без названия %283%29.png" />
+    <Resource Include="Images\Без названия %283%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="istockphoto-469936880-170667a-removebg-preview.png" />
+    <Resource Include="Images\istockphoto-469936880-170667a-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="google %281%29.jpg" />
+    <Resource Include="Images\google %281%29.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="facebook.png" />
+    <Resource Include="Images\facebook.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="instagram %281%29.png" />
+    <Resource Include="Images\instagram %281%29.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="customers.xml" />
@@ -205,38 +205,38 @@
     <Resource Include="MainWindow.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="egipt.jpg" />
+    <Resource Include="Images\egipt.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="instagram.png" />
+    <Resource Include="Images\instagram.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images-removebg-preview-removebg-preview.png" />
+    <Resource Include="Images\images-removebg-preview-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image1.png" />
+    <Resource Include="Images\Image1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image2.png" />
+    <Resource Include="Images\Image2.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="photo_2024-12-03_00-46-37.jpg" />
+    <Resource Include="Images\photo_2024-12-03_00-46-37.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="photo_2024-12-03_00-47-48.jpg" />
+    <Resource Include="Images\photo_2024-12-03_00-47-48.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Antalya Beach Resort 5.png" />
-    <Resource Include="Split Sunset Hotel 4.png" />
+    <Resource Include="Images\Antalya Beach Resort 5.png" />
+    <Resource Include="Images\Split Sunset Hotel 4.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Amsterdam Art Hotel 4.jpg" />
-    <Resource Include="Bali Paradise Resort 5.jpg" />
-    <Resource Include="Catalonia Plaza Hotel 4.jpg" />
-    <Resource Include="Le Grand Hotel Paris 4.jpg" />
-    <Resource Include="Manhattan Grand Hotel 5.jpg" />
-    <Resource Include="Roma Palace Hotel 4.jpg" />
-    <Resource Include="Venetian Palace Hotel 4.jpg" />
+    <Resource Include="Images\Amsterdam Art Hotel 4.jpg" />
+    <Resource Include="Images\Bali Paradise Resort 5.jpg" />
+    <Resource Include="Images\Catalonia Plaza Hotel 4.jpg" />
+    <Resource Include="Images\Le Grand Hotel Paris 4.jpg" />
+    <Resource Include="Images\Manhattan Grand Hotel 5.jpg" />
+    <Resource Include="Images\Roma Palace Hotel 4.jpg" />
+    <Resource Include="Images\Venetian Palace Hotel 4.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Magick.NET-Q16-AnyCPU.14.2.0\build\netstandard20\Magick.NET-Q16-AnyCPU.targets" Condition="Exists('..\packages\Magick.NET-Q16-AnyCPU.14.2.0\build\netstandard20\Magick.NET-Q16-AnyCPU.targets')" />

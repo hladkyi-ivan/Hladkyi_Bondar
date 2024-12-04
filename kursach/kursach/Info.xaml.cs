@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace kursach
 {
     /// <summary>
-    /// Логика взаимодействия для history_buying.xaml
+    /// Логика взаимодействия для Info.xaml
     /// </summary>
-    public partial class history_buying : Page
+    public partial class Info : Page
     {
-        public history_buying()
+        public Info()
         {
             InitializeComponent();
         }
