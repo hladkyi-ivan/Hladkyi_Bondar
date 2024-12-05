@@ -128,7 +128,7 @@
         </Border>
         <Button x:Name="Q" Margin="660,0,0,0"  Command="{Binding CustomerViewModel.NavigateToInfoCommand}" BorderBrush="{x:Null}" Foreground="{x:Null}">
             <Button.Background>
-                <ImageBrush TileMode="None" Stretch="Fill" ImageSource="/View/о нас.png"/>
+                <ImageBrush TileMode="None" Stretch="Fill" ImageSource="/Images/о нас.png"/>
             </Button.Background>
         </Button>
         <Button Grid.Column="2" 
